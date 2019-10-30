@@ -1,9 +1,4 @@
 export default {
-    green: '#4cd964',
-    white: '#ffffff',
-    black: '#000000',
-    textGray: '#717171',
-    backgroundGray: '#eeeeee',
-    red: '#fe879a',
-    yeallow: '#f9dc5c'
+    sonicSilver: '#757780',
+    gunMetal: '#30323D'
 };
