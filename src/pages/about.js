@@ -8,7 +8,6 @@ import SEO from "../components/seo";
 const About = () => (
     <Layout>
         <SEO title="Hoang Tran"/>
-        <Banner />
         <div>about</div>
     </Layout>
 );
