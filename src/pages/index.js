@@ -1,14 +1,12 @@
-import React from 'react';
-import Content from '../components/content';
-import Banner from '../components/banner';
-import Layout from '../components/layout';
-import SEO from '../components/seo';
+import React from "react";
+import Banner from "../components/banner";
+import Layout from "../components/layout";
+import SEO from "../components/seo";
 
 const IndexPage = () => (
     <Layout>
         <SEO title="Hoang Tran"/>
         <Banner />
-        <Content />
     </Layout>
 );
 

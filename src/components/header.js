@@ -1,7 +1,7 @@
-import { Link } from 'gatsby';
-import PropTypes from 'prop-types';
-import React from 'react';
-import colors from '../constants/colors';
+import { Link } from "gatsby";
+import PropTypes from "prop-types";
+import React from "react";
+import colors from "../constants/colors";
 
 const Header = ({ siteTitle }) => (
     <header
@@ -14,9 +14,9 @@ const Header = ({ siteTitle }) => (
         >
             <h1>
                 <Link to="/" style={styles.h4} >
-                    {' '}
+                    {" "}
                     {siteTitle}
-                    {' '}
+                    {" "}
                 </Link>
             </h1>
             <h4>
@@ -39,21 +39,21 @@ Header.propTypes = {
 };
 
 Header.defaultProps = {
-    siteTitle: '',
+    siteTitle: "",
 };
 const styles = {
     h4: {
-        color: 'white',
-        textDecoration: 'none',
+        color: "white",
+        textDecoration: "none",
     },
     container: {
-        margin: '0 auto',
+        margin: "0 auto",
         maxWidth: 1080,
-        padding: '1.45rem 1.0875rem',
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'center'
+        padding: "1.45rem 1.0875rem",
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "center"
     }
 };
 

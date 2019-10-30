@@ -1,10 +1,15 @@
 import React, {Fragment} from 'react';
 import colors from '../constants/colors';
+import Banner from '../components/banner';
+import Layout from '../components/layout';
+import SEO from '../components/seo';
 
 const Projects = () => (
-    <>
-        <div>Projects</div>
-    </>
+    <Layout>
+        <SEO title="Hoang Tran"/>
+        <Banner />
+        <div>projects</div>
+    </Layout>
 );
 const styles = {
 
