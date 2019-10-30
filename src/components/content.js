@@ -1,13 +1,10 @@
 import React, {Fragment} from 'react';
-import About from './about';
-import Skills from './skills';
-import Resume from './resume';
-import Projects from './projects';
+
 import colors from '../constants/colors';
 
 const Content = () => (
     <>
-        <div>placeholder</div>
+        <div>Test</div>
     </>
 );
 const styles = {
