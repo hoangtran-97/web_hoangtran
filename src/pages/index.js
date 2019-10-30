@@ -1,21 +1,30 @@
 import React from "react"
-import { Link } from "gatsby"
-
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import doge from '../images/doge.png';
 
 const IndexPage = () => (
-  <Layout>
-    <SEO title="Hoang Tran" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
+
+      <div style={styles.header}>
+              <p>Hello and welcome to my portfolio site.</p>
+              <img
+                  src={doge}
+                  alt="This is Doge"
+                  style={styles.images}
+              />
+          </div>
 )
+const styles = {
+    images: {
+        borderRadius: '50%',
+        width: 350,
+        height: 350
+    },
+    tab: {
+        backgroundColor: 'green'
+    },
+    header: {
+        display: 'flex',
+        flexDirection: 'row'
+    }
+};
 
 export default IndexPage
