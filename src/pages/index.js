@@ -1,14 +1,17 @@
 import React from 'react';
-import Content from './content';
-import Header from './header';
+import Content from '../components/content';
+import Banner from '../components/banner';
+import Layout from '../components/layout';
+import SEO from '../components/seo';
 
 const IndexPage = () => {
     console.log('test');
     return (
-        <div>
-            <Header />
+        <Layout>
+            <SEO />
+            <Banner />
             <Content />
-        </div>
+        </Layout>
     );
 };
 

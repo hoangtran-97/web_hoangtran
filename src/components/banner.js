@@ -4,8 +4,8 @@ import React from 'react';
 import colors from '../constants/colors';
 import doge from '../images/doge.png';
 
-const Header = () => (
-    <div style={styles.header}>
+const Banner = () => (
+    <div style={styles.banner}>
         <p>Hello and welcome to my portfolio site.</p>
         <img
             src={doge}
@@ -24,7 +24,7 @@ const styles = {
     tab: {
         backgroundColor: 'green'
     },
-    header: {
+    banner: {
         display: 'flex',
         flexDirection: 'row',
         backgroundColor: colors.sonicSilver,
@@ -33,4 +33,4 @@ const styles = {
         height: 500
     }
 };
-export default Header;
+export default Banner;
