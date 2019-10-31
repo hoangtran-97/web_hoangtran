@@ -56,7 +56,6 @@ const Banner = () => {
                     setGame(false);
                     setPosition([40, 15]);
                 }}
-                onMouseLeave={() => { console.log(getRandomPoint()); }}
             >
                 {
                     gameStarted
