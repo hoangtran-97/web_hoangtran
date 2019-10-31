@@ -7,8 +7,8 @@ import doge from "../images/doge.png";
 import Image from "./image";
 
 const Banner = () => {
-    const [position, setPosition] = useState([60, 15]);
-    // const [dogeRun, setDogeRun] = useState(true);
+    const [position, setPosition] = useState([40, 15, 0]);
+    const [dogeRun, setDogeRun] = useState(true);
     const [title, setTitle] = useState("Well hello there!");
     const [gameStarted, setGame] = useState(false);
     const animation = useSpring({
@@ -20,12 +20,14 @@ const Banner = () => {
         alignItems: "center",
         width: 400,
         height: 400,
-        flexDirection: "column"
+        flexDirection: "column",
+        transform: gameStarted ? `rotateZ(${position[2]}deg)` : "rotateZ(0deg)"
     });
     const getRandomPoint = (elementWidth, elementHeight) => {
         const y = randomRange(0, 60);
         const x = randomRange(0, 70);
-        const array = [y, x];
+        const z = randomRange(0, 180);
+        const array = [y, x, z];
         return array;
     };
     const randomRange = (min, max) => {
@@ -45,15 +47,14 @@ const Banner = () => {
             <animated.div
                 style={animation}
                 onMouseEnter={() => {
-                    gameStarted
-                        ? setPosition(getRandomPoint())
-                        : (
-                            setGame(true),
-                            setPosition(getRandomPoint()),
-                            setTitle("Yeah I forgot to mention,"));
+                    dogeRun ? (
+                        setGame(true),
+                        setPosition(getRandomPoint()),
+                        setTitle("Yeah I forgot to mention,")) : setTitle("He won't run again");
                 }}
                 onClick={() => {
                     setGame(false);
+                    setDogeRun(false);
                     setPosition([40, 15]);
                 }}
             >
@@ -92,7 +93,7 @@ const styles = {
         borderTopRightRadius: 15,
         borderBottomRightRadius: 15,
         position: "absolute",
-        top: -35,
+        top: -40,
         left: 200
     }
 };
