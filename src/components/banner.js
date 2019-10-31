@@ -6,28 +6,33 @@ import colors from "../constants/colors";
 import doge from "../images/doge.png";
 import Image from "./image";
 
-const getRandomPoint = (elementWidth, elementHeight) => {
-    const x = `${(Math.random() * 70).toFixed(0)}%`;
-    const y = `${(Math.random() * 80).toFixed(0)}%`;
-    const array = [x, y];
-    return array;
-};
 const Banner = () => {
-    const [position, setPosition] = useState(["40%", "15%"]);
-    const [dogeRun, setDogeRun] = useState(true);
+    const [position, setPosition] = useState([60, 15]);
+    // const [dogeRun, setDogeRun] = useState(true);
     const [title, setTitle] = useState("Well hello there!");
     const [gameStarted, setGame] = useState(false);
     const animation = useSpring({
         position: "absolute",
-        top: position[0],
-        right: position[1],
+        top: `${position[0]}%`,
+        right: `${position[1]}%`,
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        width: 450,
-        height: 450,
+        width: 400,
+        height: 400,
         flexDirection: "column"
     });
+    const getRandomPoint = (elementWidth, elementHeight) => {
+        const y = randomRange(0, 60);
+        const x = randomRange(0, 70);
+        const array = [y, x];
+        return array;
+    };
+    const randomRange = (min, max) => {
+        Math.ceil(min);
+        Math.floor(max);
+        return Math.floor(Math.random() * (max - min)) + min;
+    };
     return (
         <div style={styles.banner}>
             <div>
@@ -40,18 +45,18 @@ const Banner = () => {
             <animated.div
                 style={animation}
                 onMouseEnter={() => {
-                    dogeRun
-                        ? setPosition(getRandomPoint()) : null;
                     gameStarted
-                        ? null
+                        ? setPosition(getRandomPoint())
                         : (
                             setGame(true),
+                            setPosition(getRandomPoint()),
                             setTitle("Yeah I forgot to mention,"));
                 }}
                 onClick={() => {
-                    setDogeRun(false);
-                    setPosition(["40%", "15%"]);
+                    setGame(false);
+                    setPosition([40, 15]);
                 }}
+                onMouseLeave={() => { console.log(getRandomPoint()); }}
             >
                 {
                     gameStarted
