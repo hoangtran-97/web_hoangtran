@@ -7,6 +7,15 @@ import doge from "../images/doge.png";
 import Image from "./image";
 
 const Banner = () => {
+    const youCanDoIt = [
+        "You can do it!",
+        "Get him!!!",
+        "He's laughing at you!!!",
+        "C'on!!!!!",
+        "Such wow, much effort",
+        "Go doge go.....errrr.......wrong team!"
+    ];
+    const [motivational, setMotivational] = useState("");
     const [position, setPosition] = useState([40, 15, 0]);
     const [dogeRun, setDogeRun] = useState(true);
     const [title, setTitle] = useState("Well hello there!");
@@ -38,6 +47,7 @@ const Banner = () => {
     return (
         <div style={styles.banner}>
             <div>
+                {gameStarted ? (<h2 style={styles.motivational}>{motivational}</h2>) : null}
                 <h1 style={styles.text}>{title}</h1>
                 <h3 style={styles.text}>{!gameStarted ? "I guess you must be very interested in my work to be here" : "He loves his PRIVACY."}</h3>
                 <h3 style={styles.text}>{!gameStarted ? "Click on Doge if you want a face reveal!!!" : "You are gonna have to catch him,"}</h3>
@@ -50,12 +60,17 @@ const Banner = () => {
                     dogeRun ? (
                         setGame(true),
                         setPosition(getRandomPoint()),
-                        setTitle("Yeah I forgot to mention,")) : setTitle("He won't run again");
+                        setTitle("Yeah I forgot to mention,")) : null;
+                }}
+                onMouseLeave={() => {
+                    const randomMotivational = youCanDoIt[Math.floor(Math.random() * youCanDoIt.length)];
+                    setMotivational(randomMotivational);
                 }}
                 onClick={() => {
                     setGame(false);
                     setDogeRun(false);
                     setPosition([40, 15]);
+                    setTitle("He won't run again");
                 }}
             >
                 {
@@ -95,6 +110,10 @@ const styles = {
         position: "absolute",
         top: -40,
         left: 200
+    },
+    motivational: {
+        color: colors.gunMetal,
+        marginBottom: 150
     }
 };
 export default Banner;
