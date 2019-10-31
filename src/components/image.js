@@ -1,6 +1,7 @@
-import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
-import Img from 'gatsby-image';
+import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import Img from "gatsby-image";
+import colors from "../constants/colors";
 
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
@@ -16,17 +17,30 @@ import Img from 'gatsby-image';
 const Image = () => {
     const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "gatsby-astronaut.png" }) {
+      placeholderImage: file(relativePath: { eq: "doge.png" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
-          }
+            fixed(width: 400, height: 400) {
+        ...GatsbyImageSharpFixed
+      }
         }
       }
     }
   `);
 
-    return <Img fluid={data.placeholderImage.childImageSharp.fluid} />;
+    return (
+        <Img
+            fixed={data.placeholderImage.childImageSharp.fixed}
+            imgStyle={styles.images}
+            alt="The Doge"
+        />
+    );
 };
-
+const styles = {
+    images: {
+        borderRadius: "50%",
+        width: 350,
+        height: 350,
+        boxShadow: "10px 5px 10px black"
+    },
+};
 export default Image;

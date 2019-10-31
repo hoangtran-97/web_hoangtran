@@ -3,6 +3,7 @@
 import React from "react";
 import colors from "../constants/colors";
 import doge from "../images/doge.png";
+import Image from "./image";
 
 const Banner = () => (
     <div style={styles.banner}>
@@ -13,20 +14,10 @@ const Banner = () => (
             <h3 style={styles.text}>Or you can do what you came here for</h3>
             <h3 style={styles.text}>And checkout the above sections</h3>
         </div>
-        <img
-            src={doge}
-            alt="This is Doge"
-            style={styles.images}
-        />
+        <Image />
     </div>
 );
 const styles = {
-    images: {
-        borderRadius: "50%",
-        width: 350,
-        height: 350,
-        boxShadow: "10px 5px 10px black"
-    },
     banner: {
         display: "flex",
         flexDirection: "row",
