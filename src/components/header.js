@@ -1,39 +1,42 @@
 import { Link } from "gatsby";
 import PropTypes from "prop-types";
-import React from "react";
+import React, {useState} from "react";
 import colors from "../constants/colors";
 
-const Header = ({ siteTitle }) => (
-    <header
-        style={{
-            background: colors.gunMetal,
-        }}
-    >
-        <div
-            style={styles.container}
+const Header = ({ siteTitle }) => {
+    const [activeTab, setActiveTab] = useState([true, false, false, false, false]);
+    return (
+        <header
+            style={{
+                background: colors.gunMetal,
+            }}
         >
-            <h1>
-                <Link to="/" style={styles.h4} >
-                    {" "}
-                    {siteTitle}
-                    {" "}
-                </Link>
-            </h1>
-            <h4>
-                <Link to="/about" style={styles.h4} > About Me </Link>
-            </h4>
-            <h4>
-                <Link to="/skills" style={styles.h4} > Skills </Link>
-            </h4>
-            <h4>
-                <Link to="/resume" style={styles.h4} > Resume </Link>
-            </h4>
-            <h4>
-                <Link to="/projects" style={styles.h4} > Projects </Link>
-            </h4>
-        </div>
-    </header>
-);
+            <div
+                style={styles.container}
+            >
+                <h1>
+                    <Link to="/" style={styles.h4} activeStyle={styles.active} >
+                        {" "}
+                        {siteTitle}
+                        {" "}
+                    </Link>
+                </h1>
+                <h4>
+                    <Link to="/about" style={styles.h4} activeStyle={styles.active}> About Me </Link>
+                </h4>
+                <h4>
+                    <Link to="/skills" style={styles.h4} activeStyle={styles.active}> Skills </Link>
+                </h4>
+                <h4>
+                    <Link to="/resume" style={styles.h4} activeStyle={styles.active}> Resume </Link>
+                </h4>
+                <h4>
+                    <Link to="/projects" style={styles.h4} activeStyle={styles.active}> Projects </Link>
+                </h4>
+            </div>
+        </header>
+    );
+};
 Header.propTypes = {
     siteTitle: PropTypes.string,
 };
@@ -42,6 +45,7 @@ Header.defaultProps = {
     siteTitle: "",
 };
 const styles = {
+    active: {backgroundColor: colors.sonicSilver, padding: 10, borderRadius: 20},
     h4: {
         color: "white",
         textDecoration: "none",
