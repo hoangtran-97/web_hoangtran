@@ -1,6 +1,7 @@
 /* @flow weak */
 
 import React, {useState} from "react";
+import { animated, useSpring } from "react-spring";
 import colors from "../constants/colors";
 import doge from "../images/doge.png";
 import Image from "./image";
@@ -11,9 +12,13 @@ const getRandomPoint = (elementWidth, elementHeight) => {
     const array = [x, y];
     return array;
 };
-
 const Banner = () => {
     const [position, setPosition] = useState(["40%", "15%"]);
+    const animation = useSpring({
+        position: "absolute",
+        top: position[0],
+        right: position[1],
+    });
     return (
         <div style={styles.banner}>
             <div>
@@ -23,12 +28,8 @@ const Banner = () => {
                 <h3 style={styles.text}>Or you can do what you came here for</h3>
                 <h3 style={styles.text}>And checkout the above sections</h3>
             </div>
-            <div
-                style={{
-                    position: "absolute",
-                    top: position[0],
-                    right: position[1]
-                }}
+            <animated.div
+                style={animation}
                 onMouseEnter={() => {
                     setPosition(getRandomPoint());
                 }}
@@ -37,8 +38,7 @@ const Banner = () => {
                 }}
             >
                 <Image />
-            </div>
-
+            </animated.div>
         </div>
     );
 };
