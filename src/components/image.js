@@ -6,7 +6,14 @@ import colors from "../constants/colors";
 const Image = () => {
     const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "doge.png" }) {
+      doge: file(relativePath: { eq: "doge.png" }) {
+        childImageSharp {
+            fixed(width: 400, height: 400) {
+        ...GatsbyImageSharpFixed
+      }
+        }
+      }
+      me: file(relativePath: { eq: "me.jpg" }) {
         childImageSharp {
             fixed(width: 400, height: 400) {
         ...GatsbyImageSharpFixed
@@ -18,7 +25,7 @@ const Image = () => {
 
     return (
         <Img
-            fixed={data.placeholderImage.childImageSharp.fixed}
+            fixed={data.doge.childImageSharp.fixed}
             imgStyle={styles.images}
             alt="The Doge"
         />
