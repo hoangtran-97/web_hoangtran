@@ -42,7 +42,8 @@ module.exports = {
         "no-undef": "off",
         "no-nested-ternary":"off",
         "no-unused-expressions":"off",
-		"quotes": [2, "double", { "avoidEscape": true }]
+		"quotes": [2, "double", { "avoidEscape": true }],
+        
 
     },
     "globals": {

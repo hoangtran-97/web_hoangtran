@@ -33,18 +33,10 @@ const Image = (props) => (
                 <Img
                     alt={props.alt}
                     fluid={image.node.childImageSharp.fluid}
-                    imgStyle={styles.images}
+                    imgStyle={props.style}
                 />
             );
         }}
     />
 );
-const styles = {
-    images: {
-        borderRadius: "50%",
-        width: 350,
-        height: 350,
-        boxShadow: "10px 5px 10px black"
-    },
-};
 export default Image;

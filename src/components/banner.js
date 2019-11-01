@@ -81,7 +81,7 @@ const Banner = () => {
                         ? (<div style={styles.dogeComment}>My face is in the About Me section.</div>)
                         : null
                 }
-                <Image alt="The doge" filename="doge.png" />
+                <Image alt="The doge" filename="doge.png" style={styles.imagesRound} />
             </animated.div>
         </div>
     );
@@ -122,8 +122,11 @@ const styles = {
         borderBottomRightRadius: 15,
         padding: 10,
     },
-    textHighlight: {
-        fontWeight: "700"
-    }
+    imagesRound: {
+        borderRadius: "50%",
+        width: 350,
+        height: 350,
+        boxShadow: "10px 5px 10px black"
+    },
 };
 export default Banner;
