@@ -13,9 +13,10 @@ const Banner = () => {
         "He's laughing at you!!!",
         "C'on!!!!!",
         "Such wow, much effort",
-        "Go doge go.....errrr.......wrong team!"
+        "Go doge go.....errrr.......wrong team!",
+        "You're one click away from success!!"
     ];
-    const [motivational, setMotivational] = useState("");
+    const [motivational, setMotivational] = useState("...");
     const [position, setPosition] = useState([40, 15, 0]);
     const [dogeRun, setDogeRun] = useState(true);
     const [title, setTitle] = useState("Well hello there!");
@@ -24,12 +25,8 @@ const Banner = () => {
         position: "absolute",
         top: `${position[0]}%`,
         right: `${position[1]}%`,
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
         width: 400,
         height: 400,
-        flexDirection: "column",
         transform: gameStarted ? `rotateZ(${position[2]}deg)` : "rotateZ(0deg)"
     });
     const getRandomPoint = (elementWidth, elementHeight) => {
@@ -47,10 +44,11 @@ const Banner = () => {
     return (
         <div style={styles.banner}>
             <div>
+
                 {gameStarted ? (<h2 style={styles.motivational}>{motivational}</h2>) : null}
                 <h1 style={styles.text}>{title}</h1>
                 <h3 style={styles.text}>{!gameStarted ? "I guess you must be very interested in my work to be here" : "He loves his PRIVACY."}</h3>
-                <h3 style={styles.text}>{!gameStarted ? "Click on Doge if you want a face reveal!!!" : "You are gonna have to catch him,"}</h3>
+                <h3 style={styles.text}>{!gameStarted ? "Click on DOGE if you want a face reveal!!!" : "You are gonna have to catch him,"}</h3>
                 <h3 style={styles.text}>{!gameStarted ? "Or you can do what you came here for" : "Click on him,"}</h3>
                 <h3 style={styles.text}>{!gameStarted ? "And checkout the above sections" : "Then I'm sure he'll stop"}</h3>
             </div>
@@ -70,7 +68,7 @@ const Banner = () => {
                     setGame(false);
                     setDogeRun(false);
                     setPosition([40, 15]);
-                    setTitle("He won't run again");
+                    setTitle("He won't run again,");
                 }}
             >
                 {
@@ -78,8 +76,12 @@ const Banner = () => {
                         ? (<div style={styles.dogeComment}>Get the hell away from me!</div>)
                         : null
                 }
-
-                <Image />
+                {
+                    !gameStarted && !dogeRun
+                        ? (<div style={styles.dogeComment}>My face is in the About Me section.</div>)
+                        : null
+                }
+                <Image alt="The doge" filename="doge.png" />
             </animated.div>
         </div>
     );
@@ -113,7 +115,15 @@ const styles = {
     },
     motivational: {
         color: colors.gunMetal,
-        marginBottom: 150
+        marginBottom: 150,
+        backgroundColor: colors.silverSand,
+        borderTopLeftRadius: 15,
+        borderTopRightRadius: 15,
+        borderBottomRightRadius: 15,
+        padding: 10,
+    },
+    textHighlight: {
+        fontWeight: "700"
     }
 };
 export default Banner;

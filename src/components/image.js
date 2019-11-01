@@ -1,36 +1,44 @@
 import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
+import { StaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 import colors from "../constants/colors";
-
-const Image = () => {
-    const data = useStaticQuery(graphql`
-    query {
-      doge: file(relativePath: { eq: "doge.png" }) {
-        childImageSharp {
-            fixed(width: 400, height: 400) {
-        ...GatsbyImageSharpFixed
-      }
+// source: https://stackoverflow.com/questions/55122752/reusable-gatsby-image-component-with-dynamic-image-sources
+const Image = (props) => (
+    <StaticQuery
+        query={graphql`
+      query {
+        images: allFile {
+          edges {
+            node {
+              relativePath
+              name
+              childImageSharp {
+                fluid(maxWidth: 600) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
         }
       }
-      me: file(relativePath: { eq: "me.jpg" }) {
-        childImageSharp {
-            fixed(width: 400, height: 400) {
-        ...GatsbyImageSharpFixed
-      }
-        }
-      }
-    }
-  `);
+    `}
+        render={(data) => {
+            const image = data.images.edges.find((n) => n.node.relativePath.includes(props.filename));
+            if (!image) {
+                return null;
+            }
 
-    return (
-        <Img
-            fixed={data.doge.childImageSharp.fixed}
-            imgStyle={styles.images}
-            alt="The Doge"
-        />
-    );
-};
+            // const imageSizes = image.node.childImageSharp.sizes; sizes={imageSizes}
+            return (
+                <Img
+                    alt={props.alt}
+                    fluid={image.node.childImageSharp.fluid}
+                    imgStyle={styles.images}
+                />
+            );
+        }}
+    />
+);
 const styles = {
     images: {
         borderRadius: "50%",
