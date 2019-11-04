@@ -5,6 +5,9 @@ import Banner from "../components/banner";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import Image from "../components/image";
+import WhoAmI from "../components/whoAmI";
+import MoreMe from "../components/moreMe";
+import MyInterests from "../components/myInterests";
 
 const About = () => (
     <Layout>
@@ -18,28 +21,10 @@ const About = () => (
                     <Image alt="myAvatar" filename="me.jpg" style={styles.avatar}/>
                 </div>
             </div>
+            <WhoAmI />
             <div style={styles.textContainer}>
-                <div style={styles.textSection}>
-                    <h1 align="center">About Me</h1>
-                    <p>
-    My name is Hoang,
-                        <br/>
-    I am a student from South Eastern University of Applied Sciences, XAMK.
-                        <br/>
-    My degree program is Bacheclor of Engineering, Information Technology.
-                        <br/>
-    I majored in Networking, meaning my studies are related to networking devices, routers, switches, servers, virtualization, IoT,...
-                        <br/>
-    However, after 3 years of hardworking and earning various Cisco and MTA certificates, I find networking is not my cup of tea.
-                        <br/>
-    Instead, I moved to learn programming on my own full time, for me it is more engaging,
-    more rewarding and its been my dream to build something on my own to improve peoples daily live,
-    especially a mobile product since smartphone is a part of our lives nowadays.
-                    </p>
-                </div>
-                <div style={styles.textSection}>
-                    <h1 align="center">My Interest</h1>
-                </div>
+                <MoreMe />
+                <MyInterests />
                 <div style={styles.textSection}>
                     <h1 align="center">Lets Connect</h1>
                 </div>
@@ -66,7 +51,8 @@ const styles = {
         width: "90%",
         display: "flex",
         flexDirection: "row",
-        justifyContent: "space-around"
+        justifyContent: "space-around",
+        marginTop: 50
     },
     avatar: {
         width: 200,
@@ -91,7 +77,17 @@ const styles = {
     },
     textSection: {
         width: "30%",
-        backgroundColor: "green"
     },
+    osBackgroundContainer: {
+        width: 150,
+        height: 150,
+
+    },
+    osBackground: {
+        borderRadius: 50,
+        width: 100,
+        height: 100,
+
+    }
 };
 export default About;
