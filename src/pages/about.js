@@ -8,6 +8,7 @@ import Image from "../components/image";
 import WhoAmI from "../components/whoAmI";
 import MoreMe from "../components/moreMe";
 import MyInterests from "../components/myInterests";
+import LetsConnect from "../components/letsConnect";
 
 const About = () => (
     <Layout>
@@ -25,9 +26,7 @@ const About = () => (
             <div style={styles.textContainer}>
                 <MoreMe />
                 <MyInterests />
-                <div style={styles.textSection}>
-                    <h1 align="center">Lets Connect</h1>
-                </div>
+                <LetsConnect />
             </div>
         </div>
     </Layout>
@@ -74,20 +73,6 @@ const styles = {
     imagesContainer: {
         position: "relative",
         marginBottom: 100,
-    },
-    textSection: {
-        width: "30%",
-    },
-    osBackgroundContainer: {
-        width: 150,
-        height: 150,
-
-    },
-    osBackground: {
-        borderRadius: 50,
-        width: 100,
-        height: 100,
-
     }
 };
 export default About;
