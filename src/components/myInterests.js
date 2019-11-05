@@ -7,6 +7,7 @@ const MyInterests = () => (
     <div style={styles.textSection}>
         <h1 align="center">My Interests</h1>
         <ul>
+            <li>Two cups of coffee a day.</li>
             <li>Mobile and Web programming.</li>
             <li>Technology, watching them on YouTube or reading about them on Reddit.</li>
             <li>Video Games(Strategy, Puzzle game or anything with a good story)</li>
@@ -48,8 +49,9 @@ export default MyInterests;
 
 const styles = {
     textSection: {
-        width: "30%",
-        minWidth: 300
+        width: "60%",
+        minWidth: 300,
+        margin: 10
     },
     osBackgroundContainer: {
         width: 170,

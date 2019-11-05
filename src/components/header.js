@@ -10,25 +10,23 @@ const Header = ({ siteTitle }) => (
         <div
             style={styles.container}
         >
-            <h1>
+            <h4>
                 <Link to="/" style={styles.h4} activeStyle={styles.active} >
                     {" "}
                     {siteTitle}
                     {" "}
                 </Link>
-            </h1>
-            <h4>
+            </h4>
+            <p>
                 <Link to="/about" style={styles.h4} activeStyle={styles.active}> About Me </Link>
-            </h4>
-            <h4>
-                <Link to="/skills" style={styles.h4} activeStyle={styles.active}> Skills </Link>
-            </h4>
-            <h4>
+            </p>
+
+            <p>
                 <Link to="/resume" style={styles.h4} activeStyle={styles.active}> Resume </Link>
-            </h4>
-            <h4>
-                <Link to="/projects" style={styles.h4} activeStyle={styles.active}> Projects </Link>
-            </h4>
+            </p>
+            <p>
+                <Link to="/contacts" style={styles.h4} activeStyle={styles.active}> Contact </Link>
+            </p>
         </div>
     </header>
 );
@@ -44,7 +42,7 @@ const styles = {
     h4: {
         color: "white",
         textDecoration: "none",
-        padding: 10,
+        padding: 5
     },
     container: {
         margin: "0 auto",

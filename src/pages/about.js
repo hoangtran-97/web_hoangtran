@@ -8,7 +8,6 @@ import Image from "../components/image";
 import WhoAmI from "../components/whoAmI";
 import MoreMe from "../components/moreMe";
 import MyInterests from "../components/myInterests";
-import LetsConnect from "../components/letsConnect";
 
 const About = () => (
     <Layout>
@@ -16,24 +15,22 @@ const About = () => (
         <div style={styles.container}>
             <div style={styles.imagesContainer}>
                 <div style={styles.backGround}>
-                    <Image alt="myBackGround" filename="backGround.jpg" style={styles.backGround}/>
+                    <Image alt="myBackGround" filename="coffee.jpg" style={styles.backGround}/>
                 </div>
                 <div style={styles.avatarContainer}>
                     <Image alt="myAvatar" filename="me.jpg" style={styles.avatar}/>
                 </div>
             </div>
             <WhoAmI />
-            <div style={styles.textContainer}>
-                <MoreMe />
-                <MyInterests />
-                <LetsConnect />
-            </div>
+            <MoreMe />
+            <MyInterests />
         </div>
     </Layout>
 );
 const styles = {
     backGround: {
         width: 900,
+        minWidth: 300,
         height: 500,
         borderRadius: 20
     },

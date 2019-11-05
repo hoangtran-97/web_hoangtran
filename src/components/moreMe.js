@@ -23,7 +23,8 @@ export default MoreMe;
 
 const styles = {
     textSection: {
-        width: "30%",
-        minWidth: 300
+        width: "60%",
+        minWidth: 300,
+        margin: 10
     },
 };
