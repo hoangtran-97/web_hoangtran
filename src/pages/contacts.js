@@ -7,7 +7,7 @@ import LetsConnect from "../components/letsConnect";
 
 const Projects = () => (
     <Layout>
-        <SEO title="Hoang Tran"/>
+        <SEO title="Contacts"/>
         <div style={styles.container}><LetsConnect /></div>
     </Layout>
 );

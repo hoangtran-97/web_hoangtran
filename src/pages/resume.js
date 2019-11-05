@@ -6,7 +6,7 @@ import SEO from "../components/seo";
 
 const Resume = () => (
     <Layout>
-        <SEO title="Hoang Tran"/>
+        <SEO title="Resume"/>
         <div>resume</div>
     </Layout>
 );
