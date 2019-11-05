@@ -26,18 +26,16 @@ const TechStack = () => {
     return (
         <animated.div
             style={animation}
+            onClick={() => {
+                setCollapse(!collapse);
+            }}
+            onKeyPress={() => {
+                setCollapse(!collapse);
+            }}
+            role="button"
+            tabIndex={0}
         >
-            <div
-                style={styles.button}
-                onClick={() => {
-                    setCollapse(!collapse);
-                }}
-                onKeyPress={() => {
-                    setCollapse(!collapse);
-                }}
-                role="button"
-                tabIndex={0}
-            >
+            <div style={styles.button}>
                 {!collapse
                     ? (<MdIndeterminateCheckBox style={styles.buttonIcon}/>)
                     : (<MdAddBox style={styles.buttonIcon}/>)}

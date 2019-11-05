@@ -4,11 +4,15 @@ import Banner from "../components/banner";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import TechStack from "../components/techStack";
+import CV from "../components/CV";
 
 const Resume = () => (
     <Layout>
         <SEO title="Resume"/>
-        <div style={styles.container}><TechStack /></div>
+        <div style={styles.container}>
+            <TechStack />
+            <CV />
+        </div>
     </Layout>
 );
 const styles = {

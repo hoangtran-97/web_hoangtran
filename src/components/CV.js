@@ -21,7 +21,7 @@ const TechStack = () => {
         alignItems: "center",
         margin: 10,
         paddingTop: 20,
-        height: collapse ? 100 : 600
+        height: collapse ? 100 : 1000
     });
     return (
         <animated.div
@@ -36,38 +36,32 @@ const TechStack = () => {
                     setCollapse(!collapse);
                 }}
                 role="button"
-                tabIndex={0}
+                tabIndex="-1"
             >
                 {!collapse
                     ? (<MdIndeterminateCheckBox style={styles.buttonIcon}/>)
                     : (<MdAddBox style={styles.buttonIcon}/>)}
-                My Tech Stack
+                Curriculum vitae
             </div>
             { !collapse
                 ? (
-                    <div>
-                        <div>
-                            <IoLogoHtml5 style={styles.icon}/>
-                            <IoLogoCss3 style={styles.icon}/>
-                            <IoLogoJavascript style={styles.icon}/>
-                            <FaReact style={styles.icon}/>
-                            <DiSwift style={styles.icon}/>
+                    <div style={styles.container}>
+                        <div style={styles.buttonDownload}>
+                            <a
+                                href="https://drive.google.com/uc?export=download&id=1FBAb2dy9e3gVUE_ecZpzl2SCrljQ6iKX"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                style={styles.buttonDownloadText}
+                            >
+                            Download
+                            </a>
                         </div>
-                        <h3 align="center">Tools I am familiar with:</h3>
-                        <div>
-                            <FaGithub style={styles.icon}/>
-                            <FiGitlab style={styles.icon}/>
-                            <DiJira style={styles.icon}/>
-                            <DiVisualstudio style={styles.icon}/>
-                            <DiAtom style={styles.icon}/>
-                        </div>
-                        <h3 align="center">Also worked with:</h3>
-                        <ul>
-                            <li>Postman</li>
-                            <li>Realm Databases</li>
-                            <li>Proto.io</li>
-                            <li>Adobe XD</li>
-                        </ul>
+                        <iframe
+                            src="https://drive.google.com/file/d/1FBAb2dy9e3gVUE_ecZpzl2SCrljQ6iKX/preview?usp=embed_googleplus"
+                            allowFullScreen
+                            title="CV"
+                            style={styles.pdf}
+                        />
                     </div>
                 ) : null}
 
@@ -77,12 +71,6 @@ const TechStack = () => {
 export default TechStack;
 
 const styles = {
-    icon: {
-        width: 50,
-        height: 50,
-        margin: 20,
-        color: colors.silverSand
-    },
     button: {
         display: "flex",
         justifyContent: "flex-start",
@@ -96,5 +84,22 @@ const styles = {
         height: 30,
         color: colors.silverSand,
         margin: 20
-    }
+    },
+    container: {
+        display: "flex",
+        alignItems: "center",
+        flexDirection: "column"
+    },
+    buttonDownload: {
+        backgroundColor: colors.silverSand,
+        width: 150,
+        height: 50,
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        borderRadius: 50,
+        margin: 10
+    },
+    pdf: {height: 800, width: 700},
+    buttonDownloadText: {textDecoration: "none", color: colors.gunMetal, fontWeight: "700"}
 };
