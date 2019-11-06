@@ -11,6 +11,7 @@ import {
 } from "react-icons/di";
 import { MdAddBox, MdIndeterminateCheckBox } from "react-icons/md";
 import { animated, useSpring } from "react-spring";
+import * as easings from "d3-ease";
 import colors from "../constants/colors";
 
 const TechStack = () => {
@@ -21,7 +22,11 @@ const TechStack = () => {
         alignItems: "center",
         margin: 10,
         paddingTop: 20,
-        height: collapse ? 100 : 600
+        height: collapse ? 100 : 600,
+        config: {
+            duration: 300,
+            easing: easings.easeCubic
+        }
     });
     return (
         <animated.div
