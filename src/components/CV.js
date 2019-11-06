@@ -1,14 +1,6 @@
 /* @flow weak */
 
 import React, {useState} from "react";
-import { FaReact, FaGithub } from "react-icons/fa";
-import { FiGitlab, } from "react-icons/fi";
-import {
-    IoLogoHtml5, IoLogoCss3, IoLogoJavascript, IoMdCheckboxOutline
-} from "react-icons/io";
-import {
-    DiSwift, DiJira, DiVisualstudio, DiAtom
-} from "react-icons/di";
 import { MdAddBox, MdIndeterminateCheckBox } from "react-icons/md";
 import { animated, useSpring } from "react-spring";
 import * as easings from "d3-ease";
