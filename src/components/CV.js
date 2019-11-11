@@ -6,7 +6,7 @@ import { animated, useSpring } from "react-spring";
 import * as easings from "d3-ease";
 import colors from "../constants/colors";
 
-const TechStack = () => {
+const CV = () => {
     const [collapse, setCollapse] = useState(false);
     const animation = useSpring({
         display: "flex",
@@ -65,7 +65,7 @@ const TechStack = () => {
         </animated.div>
     );
 };
-export default TechStack;
+export default CV;
 
 const styles = {
     button: {

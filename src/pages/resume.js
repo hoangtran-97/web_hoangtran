@@ -1,6 +1,5 @@
-import React, {Fragment} from "react";
+import React from "react";
 import colors from "../constants/colors";
-import Banner from "../components/banner";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import TechStack from "../components/techStack";

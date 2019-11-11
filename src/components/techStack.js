@@ -4,7 +4,7 @@ import React, {useState} from "react";
 import { FaReact, FaGithub } from "react-icons/fa";
 import { FiGitlab, } from "react-icons/fi";
 import {
-    IoLogoHtml5, IoLogoCss3, IoLogoJavascript, IoMdCheckboxOutline
+    IoLogoHtml5, IoLogoCss3, IoLogoJavascript
 } from "react-icons/io";
 import {
     DiSwift, DiJira, DiVisualstudio, DiAtom
