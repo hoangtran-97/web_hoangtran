@@ -1,15 +1,11 @@
 import { Link } from "gatsby";
 import PropTypes from "prop-types";
-import React, {useState} from "react";
+import React from "react";
 import colors from "../constants/colors";
 
 const Header = ({ siteTitle }) => (
-    <header
-        style={styles.header}
-    >
-        <div
-            style={styles.container}
-        >
+    <header style={styles.header}>
+        <div style={styles.container}>
             <h4>
                 <Link to="/" style={styles.h4} activeStyle={styles.active} >
                     {" "}

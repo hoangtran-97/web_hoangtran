@@ -43,7 +43,7 @@ module.exports = {
         "no-nested-ternary":"off",
         "no-unused-expressions":"off",
 		"quotes": [2, "double", { "avoidEscape": true }],
-        "no-unused-vars": ["error", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }]
+        "no-unused-vars": [1, { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }],
     },
     "globals": {
         "fetch": false
