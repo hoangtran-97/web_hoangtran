@@ -7,6 +7,7 @@ import dogeRun from "../../gif/runDoge.gif";
 import Website from "./website";
 import Jaccs from "./jaccs";
 import Yakult from "./yakult";
+import DMS from "./dms";
 
 const Projects = () => {
     const [collapse, setCollapse] = useState(false);
@@ -47,9 +48,10 @@ const Projects = () => {
                     <div>
                         <Website />
                         <h3>As React Native Developer at GMO RUNSYSTEM</h3>
+                        <DMS />
                         <Jaccs />
                         <Yakult />
-                        <h3>DMS</h3>
+                        <h3>Personal Projects</h3>
                         <h3>Moments</h3>
                         <h3>Daily Reminder</h3>
                         <h3>Daily Reminder</h3>

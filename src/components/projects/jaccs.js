@@ -37,18 +37,12 @@ const Jaccs = () => {
                 {!collapse
                     ? (<MdIndeterminateCheckBox style={styles.buttonIcon}/>)
                     : (<MdAddBox style={styles.buttonIcon}/>)}
-                <a
-                    href="https://jaccs.com.vn/en/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Jaccs
-                </a>
+                Jaccs
             </div>
             { !collapse
                 ? (
                     <div>
-                        <p>The aplication for our client at Jaccs,the main features are:</p>
+                        <p>The aplication for our client at Jaccs.com.vn, the main features are:</p>
                         <ul>
                             <li>Tracking employee&apos;s statistic and KPI.</li>
                             <li>Location, scheduling and check-in service for employees.</li>
@@ -61,7 +55,7 @@ const Jaccs = () => {
                             <li>Sending and accepting REST requests/responses to build the app&apos;s notification service.</li>
                             <li>Accept REST reponse, store them in RealmDB to show client&apos;s data.</li>
                             <li>Build search/lookup/filter funtion for application.</li>
-                            <li>Working with map libary, drawing map markers.</li>
+                            <li>Working with Google map libary, drawing map markers.</li>
                             <li>Working with Microsoft&apos;s AppCenter for automated and OTA application update.</li>
                             <li>Handle bugs and feature requests post release.</li>
                         </ul>
