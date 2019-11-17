@@ -1,7 +1,6 @@
 import React from "react";
 import { StaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
-import colors from "../constants/colors";
 // source: https://stackoverflow.com/questions/55122752/reusable-gatsby-image-component-with-dynamic-image-sources
 const Image = (props) => (
     <StaticQuery
@@ -13,7 +12,7 @@ const Image = (props) => (
               relativePath
               name
               childImageSharp {
-                fluid(maxWidth: 2000) {
+                fluid {
                   ...GatsbyImageSharpFluid
                 }
               }

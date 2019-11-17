@@ -1,6 +1,8 @@
 
 import React, {useState} from "react";
 import { animated, useSpring } from "react-spring";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 import colors from "../constants/colors";
 import Image from "./image";
 
@@ -40,53 +42,53 @@ const Banner = () => {
         return Math.floor(Math.random() * (max - min)) + min;
     };
     return (
-        <div style={styles.banner}>
-            <div>
-
+        <Row style={styles.banner}>
+            <Col xs={8}>
                 {gameStarted ? (<h2 style={styles.motivational}>{motivational}</h2>) : null}
                 <h1 style={styles.text}>{title}</h1>
                 <h3 style={styles.text}>{!gameStarted ? "I guess you must be very interested in my work to be here" : "He loves his PRIVACY."}</h3>
                 <h3 style={styles.text}>{!gameStarted ? "Click on DOGE if you want a face reveal!!!" : "You are gonna have to catch him,"}</h3>
                 <h3 style={styles.text}>{!gameStarted ? "Or you can do what you came here for" : "Click on him,"}</h3>
                 <h3 style={styles.text}>{!gameStarted ? "And checkout the above sections" : "Then I'm sure he'll stop"}</h3>
-            </div>
-            <animated.div
-                style={animation}
-                onMouseEnter={() => {
-                    dogeRun ? (
-                        setGame(true),
-                        setPosition(getRandomPoint()),
-                        setTitle("Yeah I forgot to mention,")) : null;
-                }}
-                onMouseLeave={() => {
-                    const randomMotivational = youCanDoIt[Math.floor(Math.random() * youCanDoIt.length)];
-                    setMotivational(randomMotivational);
-                }}
-                onClick={() => {
-                    setGame(false);
-                    setDogeRun(false);
-                    setPosition([40, 15]);
-                    setTitle("He won't run again,");
-                }}
-            >
-                {
-                    gameStarted
-                        ? (<div style={styles.dogeComment}>Get the hell away from me!</div>)
-                        : null
-                }
-                {
-                    !gameStarted && !dogeRun
-                        ? (<div style={styles.dogeComment}>My face is in the About Me section.</div>)
-                        : null
-                }
-                <Image alt="The doge" filename="doge.png" style={styles.imagesRound} />
-            </animated.div>
-        </div>
+            </Col>
+            <Col xs={4}>
+                <animated.div
+                    style={animation}
+                    onMouseEnter={() => {
+                        dogeRun ? (
+                            setGame(true),
+                            setPosition(getRandomPoint()),
+                            setTitle("Yeah I forgot to mention,")) : null;
+                    }}
+                    onMouseLeave={() => {
+                        const randomMotivational = youCanDoIt[Math.floor(Math.random() * youCanDoIt.length)];
+                        setMotivational(randomMotivational);
+                    }}
+                    onClick={() => {
+                        setGame(false);
+                        setDogeRun(false);
+                        setPosition([40, 15]);
+                        setTitle("He won't run again,");
+                    }}
+                >
+                    {
+                        gameStarted
+                            ? (<div style={styles.dogeComment}>Get the hell away from me!</div>)
+                            : null
+                    }
+                    {
+                        !gameStarted && !dogeRun
+                            ? (<div style={styles.dogeComment}>My face is in the About Me section.</div>)
+                            : null
+                    }
+                    <Image alt="The doge" filename="doge.png" style={styles.imagesRound} />
+                </animated.div>
+            </Col>
+        </Row>
     );
 };
 const styles = {
     banner: {
-
         display: "flex",
         flexDirection: "row",
         backgroundColor: colors.sonicSilver,

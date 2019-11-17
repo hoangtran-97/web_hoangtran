@@ -8,9 +8,12 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
 import colors from "../constants/colors";
 import Header from "./header";
 import "./layout.css";
+
 
 const Layout = ({ children }) => {
     const data = useStaticQuery(graphql`
@@ -24,20 +27,22 @@ const Layout = ({ children }) => {
   `);
 
     return (
-        <>
-            <Header siteTitle={data.site.siteMetadata.title} />
-            <div>
+        <Container>
+            <Row>
+                <Header siteTitle={data.site.siteMetadata.title} />
+            </Row>
+            <Row>
                 <main>{children}</main>
                 <footer style={{backgroundColor: colors.gunMetal, color: "white"}}>
-          ©
+                       ©
                     {" "}
                     {new Date().getFullYear()}
-, Built with
+                    , Built with
                     {" "}
                     <a style={{color: "white"}} href="https://www.gatsbyjs.org">Gatsby</a>
                 </footer>
-            </div>
-        </>
+            </Row>
+        </Container>
     );
 };
 
