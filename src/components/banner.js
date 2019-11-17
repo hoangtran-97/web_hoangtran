@@ -1,9 +1,7 @@
-/* @flow weak */
 
 import React, {useState} from "react";
 import { animated, useSpring } from "react-spring";
 import colors from "../constants/colors";
-import doge from "../images/doge.png";
 import Image from "./image";
 
 const Banner = () => {
@@ -29,7 +27,7 @@ const Banner = () => {
         height: 400,
         transform: gameStarted ? `rotateZ(${position[2]}deg)` : "rotateZ(0deg)"
     });
-    const getRandomPoint = (elementWidth, elementHeight) => {
+    const getRandomPoint = () => {
         const y = randomRange(0, 60);
         const x = randomRange(0, 70);
         const z = randomRange(0, 180);
@@ -88,6 +86,7 @@ const Banner = () => {
 };
 const styles = {
     banner: {
+
         display: "flex",
         flexDirection: "row",
         backgroundColor: colors.sonicSilver,
