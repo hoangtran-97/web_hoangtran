@@ -1,24 +1,28 @@
 import React from "react";
-import colors from "../constants/colors";
+import Row from "react-bootstrap/Row";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import TechStack from "../components/techStack";
-import CV from "../components/CV";
-import Projects from "../components/projects";
+import TechStack from "../components/resume/techStack";
+import CV from "../components/resume/CV";
+import Projects from "../components/resume/projects";
+import colors from "../constants/colors";
 
 const Resume = () => (
     <Layout>
-        <SEO title="Resume"/>
-        <div style={styles.container}>
+        <SEO title="Resume" />
+        <Row style={styles.container}>
             <TechStack />
             <CV />
             <Projects />
-        </div>
+        </Row>
     </Layout>
 );
 const styles = {
     container: {
         backgroundColor: colors.sonicSilver,
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
     }
 };
 export default Resume;
