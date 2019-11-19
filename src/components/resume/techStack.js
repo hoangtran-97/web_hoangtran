@@ -12,10 +12,10 @@ import {
 import { MdAddBox, MdIndeterminateCheckBox } from "react-icons/md";
 import { animated, useSpring } from "react-spring";
 import * as easings from "d3-ease";
-import colors from "../../constants/colors";
+import styles from "./styles";
 
 const TechStack = () => {
-    const [collapse, setCollapse] = useState(false);
+    const [collapse, setCollapse] = useState(true);
     const animation = useSpring({
         display: "flex",
         flexDirection: "column",
@@ -86,26 +86,3 @@ const TechStack = () => {
     );
 };
 export default TechStack;
-
-const styles = {
-    icon: {
-        width: 50,
-        height: 50,
-        margin: 20,
-        color: colors.silverSand
-    },
-    button: {
-        display: "flex",
-        justifyContent: "flex-start",
-        alignItems: "center",
-        fontSize: 35,
-        fontWeight: "600",
-        width: "100vw"
-    },
-    buttonIcon: {
-        width: 30,
-        height: 30,
-        color: colors.silverSand,
-        margin: 20
-    }
-};

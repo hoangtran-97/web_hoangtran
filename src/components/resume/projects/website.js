@@ -7,7 +7,7 @@ import * as easings from "d3-ease";
 import styles from "../styles";
 
 const Website = () => {
-    const [collapse, setCollapse] = useState(false);
+    const [collapse, setCollapse] = useState(true);
     const animation = useSpring({
         display: "flex",
         flexDirection: "column",
@@ -15,7 +15,7 @@ const Website = () => {
         justifyContent: "center",
         margin: 10,
         paddingTop: 20,
-        height: collapse ? 0 : 630,
+        height: collapse ? 0 : 450,
         config: {
             duration: 300,
             easing: easings.easeCubic
@@ -50,8 +50,6 @@ const Website = () => {
                                 Technologies used:
                                 <li>
                                     <span style={styles.bold}>React</span>
-                                    , I attemped to do all the styling using just inline styling, all the values are JS objects,
-                                    I have not been sucessful in making the site responsive though, so it is not mobile friendly yet!
                                 </li>
                                 <li>
                                     Create-React-App, Gatsby, Next.js, I decided to go with

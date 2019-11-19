@@ -4,10 +4,10 @@ import React, { useState } from "react";
 import { MdAddBox, MdIndeterminateCheckBox } from "react-icons/md";
 import { animated, useSpring } from "react-spring";
 import * as easings from "d3-ease";
-import colors from "../../constants/colors";
+import styles from "./styles";
 
 const CV = () => {
-    const [collapse, setCollapse] = useState(false);
+    const [collapse, setCollapse] = useState(true);
     const animation = useSpring({
         display: "flex",
         flexDirection: "column",
@@ -43,7 +43,7 @@ const CV = () => {
             >
                 {!collapse
                     ? (
-                        <div style={styles.container}>
+                        <div style={styles.cvContainer}>
                             <div style={styles.buttonDownload}>
                                 <a
                                     href="https://drive.google.com/uc?export=download&id=1FBAb2dy9e3gVUE_ecZpzl2SCrljQ6iKX"
@@ -68,39 +68,3 @@ const CV = () => {
     );
 };
 export default CV;
-
-const styles = {
-    button: {
-        display: "flex",
-        justifyContent: "flex-start",
-        alignItems: "center",
-        fontSize: 35,
-        fontWeight: "600",
-        width: "100vw"
-    },
-    buttonIcon: {
-        width: 30,
-        height: 30,
-        color: colors.silverSand,
-        margin: 20
-    },
-    container: {
-        display: "flex",
-        alignItems: "center",
-        flexDirection: "column"
-    },
-    buttonDownload: {
-        backgroundColor: colors.silverSand,
-        width: 150,
-        height: 50,
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        borderRadius: 50,
-        margin: 10
-    },
-    pdf: {
-        height: 700, width: "70vw"
-    },
-    buttonDownloadText: { textDecoration: "none", color: colors.gunMetal, fontWeight: "700" }
-};

@@ -10,7 +10,7 @@ import DMS from "./dms";
 import styles from "../styles";
 
 const Projects = () => {
-    const [collapse, setCollapse] = useState(false);
+    const [collapse, setCollapse] = useState(true);
     const animation = useSpring({
         display: "flex",
         flexDirection: "column",
@@ -47,13 +47,13 @@ const Projects = () => {
 
                 {!collapse
                     ? (
-                        <div style={styles.indexContainer}>
+                        <>
                             <Website />
                             <h3 align="center">As React Native Developer at GMO RUNSYSTEM</h3>
                             <DMS />
                             <Jaccs />
                             <Yakult />
-                            <h3>Personal Projects</h3>
+                            <h3 align="center">Personal Projects</h3>
                             <h3>Moments</h3>
                             <h3>Daily Reminder</h3>
                             <h3>Daily Reminder</h3>
@@ -63,7 +63,7 @@ const Projects = () => {
                                 alt="Otter dancing with a fish"
                                 width="500"
                             />
-                        </div>
+                        </>
                     ) : null}
             </animated.div>
         </>
