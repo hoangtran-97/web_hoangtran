@@ -2,24 +2,19 @@ import React, { useState } from "react";
 import { MdAddBox, MdIndeterminateCheckBox } from "react-icons/md";
 import { animated, useSpring } from "react-spring";
 import * as easings from "d3-ease";
-import Website from "./website";
-import Jaccs from "./jaccs";
-import Yakult from "./yakult";
-import DMS from "./dms";
 import styles from "../styles";
-import Moments from "./moments";
-import DailyReminder from "./dailyReminder";
-import RunDogeRun from "./runDogeRun";
+import dogeRun from "../../../gif/runDoge.gif";
 
-const Projects = () => {
+const RunDogeRun = () => {
     const [collapse, setCollapse] = useState(true);
     const animation = useSpring({
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
+        justifyContent: "center",
         margin: 10,
         paddingTop: 20,
-        height: collapse ? 0 : 4000,
+        height: collapse ? 0 : 600,
         config: {
             duration: 300,
             easing: easings.easeCubic
@@ -28,7 +23,7 @@ const Projects = () => {
     return (
         <>
             <div
-                style={styles.button}
+                style={styles.buttonSection}
                 onClick={() => {
                     setCollapse(!collapse);
                 }}
@@ -41,28 +36,36 @@ const Projects = () => {
                 {!collapse
                     ? (<MdIndeterminateCheckBox style={styles.buttonIcon} />)
                     : (<MdAddBox style={styles.buttonIcon} />)}
-                Projects
+                Run Doge Run (Game)
             </div>
             <animated.div
                 style={animation}
             >
+
                 {!collapse
                     ? (
-                        <>
-                            <Website />
-                            <h3 align="center">As React Native Developer at GMO RUNSYSTEM</h3>
-                            <DMS />
-                            <Jaccs />
-                            <Yakult />
-                            <h3 align="center">Personal Projects</h3>
-                            <Moments />
-                            <DailyReminder />
-                            <RunDogeRun />
+                        <div style={styles.subContainer}>
+                            <h4>My first SCRUM and Game project.</h4>
+                            <p>Made with a team of three and Click Team Fusion.</p>
+                            <p>As project manager, I learn many valuable lessons about project managements and teamwork and game making.</p>
+                            <img
+                                style={styles.runDogeRun}
+                                src={dogeRun}
+                                alt="a running doge"
+                                width="500"
+                            />
+                            <a
+                                href="https://run-doge-run.netlify.com/"
+                                target="_blank"
+                                rel="noopener noreferrer"
 
-                        </>
+                            >
+                                Give Doge a visit!
+                            </a>
+                        </div>
                     ) : null}
             </animated.div>
         </>
     );
 };
-export default Projects;
+export default RunDogeRun;

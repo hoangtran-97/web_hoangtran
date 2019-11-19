@@ -1,5 +1,5 @@
 
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { animated, useSpring } from "react-spring";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -46,10 +46,11 @@ const Banner = () => {
             <Col xs={8}>
                 {gameStarted ? (<h2 style={styles.motivational}>{motivational}</h2>) : null}
                 <h1 style={styles.text}>{title}</h1>
-                <h3 style={styles.text}>{!gameStarted ? "I guess you must be very interested in my work to be here" : "He loves his PRIVACY."}</h3>
-                <h3 style={styles.text}>{!gameStarted ? "Click on DOGE if you want a face reveal!!!" : "You are gonna have to catch him,"}</h3>
-                <h3 style={styles.text}>{!gameStarted ? "Or you can do what you came here for" : "Click on him,"}</h3>
-                <h3 style={styles.text}>{!gameStarted ? "And checkout the above sections" : "Then I'm sure he'll stop"}</h3>
+                <h3 style={styles.text}>{!gameStarted ? "I am sorry but this page " : "He loves his PRIVACY."}</h3>
+                <h3 style={styles.text}>{!gameStarted ? "only works well in a desktop browser." : "You are gonna have to catch him,"}</h3>
+                <h3 style={styles.text}>{!gameStarted ? "Click on Doge there" : "Click on him,"}</h3>
+                <h3 style={styles.text}>{!gameStarted ? "To find out why." : "Then I'm sure he'll stop"}</h3>
+                <h3 style={styles.text}>(and for a face reveal)</h3>
             </Col>
             <Col xs={4}>
                 <animated.div
@@ -125,8 +126,8 @@ const styles = {
     },
     imagesRound: {
         borderRadius: "50%",
-        width: 350,
-        height: 350,
+        width: 150,
+        height: 150,
         boxShadow: "10px 5px 10px black"
     },
 };

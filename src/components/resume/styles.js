@@ -72,5 +72,25 @@ export default {
         width: 300,
         height: 471,
         margin: "auto"
+    },
+    imageDailyReminderMain: {
+        width: 300,
+        height: 663,
+        margin: "auto"
+    },
+    imageDailyReminderSwipe: {
+        width: 300,
+        height: 531,
+        margin: "auto"
+    },
+    imageDailyReminderNew: {
+        width: 300,
+        height: 315,
+        margin: "auto"
+    },
+    runDogeRun: {
+        marginRight: "auto",
+        marginLeft: "auto",
+        display: "block"
     }
 };

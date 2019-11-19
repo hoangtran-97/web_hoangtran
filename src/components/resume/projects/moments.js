@@ -14,7 +14,7 @@ const Moments = () => {
         justifyContent: "center",
         margin: 10,
         paddingTop: 20,
-        height: collapse ? 0 : 1600,
+        height: collapse ? 0 : 1400,
         config: {
             duration: 300,
             easing: easings.easeCubic
