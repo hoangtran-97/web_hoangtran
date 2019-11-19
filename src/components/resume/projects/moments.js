@@ -3,8 +3,9 @@ import { MdAddBox, MdIndeterminateCheckBox } from "react-icons/md";
 import { animated, useSpring } from "react-spring";
 import * as easings from "d3-ease";
 import styles from "../styles";
+import Image from "../../image";
 
-const DMS = () => {
+const Moments = () => {
     const [collapse, setCollapse] = useState(true);
     const animation = useSpring({
         display: "flex",
@@ -13,7 +14,7 @@ const DMS = () => {
         justifyContent: "center",
         margin: 10,
         paddingTop: 20,
-        height: collapse ? 0 : 600,
+        height: collapse ? 0 : 1600,
         config: {
             duration: 300,
             easing: easings.easeCubic
@@ -35,7 +36,7 @@ const DMS = () => {
                 {!collapse
                     ? (<MdIndeterminateCheckBox style={styles.buttonIcon} />)
                     : (<MdAddBox style={styles.buttonIcon} />)}
-                DMS
+                Moments (React Native)
             </div>
             <animated.div
                 style={animation}
@@ -44,24 +45,27 @@ const DMS = () => {
                 {!collapse
                     ? (
                         <div style={styles.subContainer}>
-                            <h4>The aplication for our client at kangaroo.vn, the main features are:</h4>
-                            <ul>
-                                <li>Handle total client&apos;s bussiness infrastructure.</li>
-                                <li>Built for multiple level of coporate employees.</li>
-                                <li>Present datas in easily accesible manners with sort/search features</li>
-                            </ul>
-                            <h4>Responsibilities:</h4>
-                            <ul>
-                                <li>Built applications prototype conforming with client&apos;s expectations.</li>
-                                <li>Sole mobile developer.</li>
-                                <li>Create UI from application&apos;s prototype.</li>
-                                <li>use REST request and Redux Saga to receive and store informations.</li>
-                                <li>Sort data by dateTime/name/type/searchQuery.</li>
-                            </ul>
+                            <h4>This is my very first personal project.</h4>
+                            <p>I learned a lot about React Native, Development practices, Designing in general.</p>
+                            <div style={styles.imageMomentsSplash}>
+                                <Image
+                                    alt="Moments_Splash"
+                                    filename="R_Moments_Splash.png"
+                                    style={styles.imageMomentsSplash}
+                                />
+                            </div>
+                            <p>The idea is to have a simple app, to snap one memorable moment at a time, and have it represent as a simple timeline.</p>
+                            <div style={styles.imageMomentsMain}>
+                                <Image
+                                    alt="Moments_Main"
+                                    filename="R_Moments_Main.png"
+                                    style={styles.imageMomentsMain}
+                                />
+                            </div>
                         </div>
                     ) : null}
             </animated.div>
         </>
     );
 };
-export default DMS;
+export default Moments;

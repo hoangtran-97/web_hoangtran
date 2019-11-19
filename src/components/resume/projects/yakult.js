@@ -43,14 +43,14 @@ const Yakult = () => {
                 {!collapse
                     ? (
                         <div style={styles.subContainer}>
-                            <p>The aplication for our client at Yakult.co.uk, the main features are:</p>
+                            <h4>The aplication for our client at Yakult.co.uk, the main features are:</h4>
                             <ul>
                                 <li>Tracking employee&apos;s statistic and KPI.</li>
                                 <li>Location, scheduling and check-in service for employees.</li>
                                 <li>Delivery checking and storage inventory for daily deliveries.</li>
                                 <li>Client&apos;s databases for quick lookup and categorizing.</li>
                             </ul>
-                            <p>Responsibilities:</p>
+                            <h4>Responsibilities:</h4>
                             <ul>
                                 <li>Create UI from application&apos;s prototype.</li>
                                 <li>Loading modal, accessible application wide using redux.</li>

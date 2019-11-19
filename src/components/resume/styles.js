@@ -1,7 +1,9 @@
 import colors from "../../constants/colors";
 
 export default {
-    bold: { fontWeight: "700" },
+    bold: {
+        fontWeight: "700"
+    },
     icon: {
         width: 50,
         height: 50,
@@ -34,9 +36,9 @@ export default {
 
     },
     subContainer: {
-        backgroundColor: colors.plainWhite,
+        backgroundColor: colors.silverSand,
         borderRadius: 20,
-        padding: 10
+        padding: 10,
     },
     cvContainer: {
         display: "flex",
@@ -60,5 +62,15 @@ export default {
         textDecoration: "none",
         color: colors.gunMetal,
         fontWeight: "700"
+    },
+    imageMomentsSplash: {
+        width: 300,
+        height: 663,
+        margin: "auto"
+    },
+    imageMomentsMain: {
+        width: 300,
+        height: 471,
+        margin: "auto"
     }
 };

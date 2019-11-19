@@ -8,6 +8,7 @@ import Jaccs from "./jaccs";
 import Yakult from "./yakult";
 import DMS from "./dms";
 import styles from "../styles";
+import Moments from "./moments";
 
 const Projects = () => {
     const [collapse, setCollapse] = useState(true);
@@ -17,7 +18,7 @@ const Projects = () => {
         alignItems: "center",
         margin: 10,
         paddingTop: 20,
-        height: collapse ? 0 : 2000,
+        height: collapse ? 0 : 4000,
         config: {
             duration: 300,
             easing: easings.easeCubic
@@ -44,7 +45,6 @@ const Projects = () => {
             <animated.div
                 style={animation}
             >
-
                 {!collapse
                     ? (
                         <>
@@ -54,8 +54,8 @@ const Projects = () => {
                             <Jaccs />
                             <Yakult />
                             <h3 align="center">Personal Projects</h3>
-                            <h3>Moments</h3>
-                            <h3>Daily Reminder</h3>
+                            <Moments />
+                            <h3> Daily Reminder</h3>
                             <h3>Daily Reminder</h3>
                             <h3>Run Doge Run</h3>
                             <img
