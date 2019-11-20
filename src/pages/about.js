@@ -85,7 +85,7 @@ const styles = {
         borderRadius: 20,
     },
     container: {
-        backgroundColor: colors.sonicSilver,
+        backgroundColor: colors.pullmanGreen,
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-around",
@@ -106,7 +106,7 @@ const styles = {
         width: 200,
         height: 200,
         borderRadius: 100,
-        borderColor: colors.sonicSilver,
+        borderColor: colors.pullmanGreen,
         borderStyle: "solid",
         borderWidth: 10,
     },
@@ -134,7 +134,7 @@ const styles = {
         margin: 10,
     },
     rowStyle: {
-        backgroundColor: colors.silverSand,
+        backgroundColor: colors.turtleGreen,
         display: "flex",
         flexDirection: "column",
         width: "90vw",

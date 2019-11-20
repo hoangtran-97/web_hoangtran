@@ -15,7 +15,7 @@ const Projects = () => (
         <SEO title="Contacts" />
         <div style={styles.container}>
             <div style={styles.textSection}>
-                <h1 align="center">Let&apos;s Connect</h1>
+                <h1 align="center" style={styles.text}>Let&apos;s Connect</h1>
                 <div>
                     <a
                         href="mailto:hoangtranxamk@gmail.com"
@@ -71,7 +71,7 @@ const styles = {
         justifyContent: "center",
         alignItems: "center",
         height: "93vh",
-        backgroundColor: colors.sonicSilver
+        backgroundColor: colors.pullmanGreen
     },
     textSection: {
         width: "60%",
@@ -85,10 +85,13 @@ const styles = {
         width: 50,
         height: 50,
         margin: 20,
-        color: colors.gunMetal
+        color: colors.silverSand
     },
     anchor: {
-        display: "flex", alignItems: "center"
+        display: "flex", alignItems: "center", color: colors.silverSand
+    },
+    text: {
+        color: colors.silverSand
     }
 };
 export default Projects;

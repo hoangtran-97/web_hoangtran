@@ -19,7 +19,7 @@ const Resume = () => (
 );
 const styles = {
     container: {
-        backgroundColor: colors.sonicSilver,
+        backgroundColor: colors.pullmanGreen,
         display: "flex",
         flexDirection: "column",
         alignItems: "center",

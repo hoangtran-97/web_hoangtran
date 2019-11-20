@@ -19,6 +19,7 @@ const Projects = () => {
         alignItems: "center",
         margin: 10,
         paddingTop: 20,
+        marginBottom: "50vh",
         height: collapse ? 0 : 4000,
         config: {
             duration: 300,
@@ -39,8 +40,8 @@ const Projects = () => {
                 tabIndex="-2"
             >
                 {!collapse
-                    ? (<MdIndeterminateCheckBox style={styles.buttonIcon} />)
-                    : (<MdAddBox style={styles.buttonIcon} />)}
+                    ? (<MdIndeterminateCheckBox style={styles.buttonIconBlack} />)
+                    : (<MdAddBox style={styles.buttonIconBlack} />)}
                 Projects
             </div>
             <animated.div
@@ -50,11 +51,11 @@ const Projects = () => {
                     ? (
                         <>
                             <Website />
-                            <h3 align="center">As React Native Developer at GMO RUNSYSTEM</h3>
+                            <h3 align="center" style={styles.text}>As React Native Developer at GMO RUNSYSTEM</h3>
                             <DMS />
                             <Jaccs />
                             <Yakult />
-                            <h3 align="center">Personal Projects</h3>
+                            <h3 align="center" style={styles.text}>Personal Projects</h3>
                             <Moments />
                             <DailyReminder />
                             <RunDogeRun />

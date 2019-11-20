@@ -43,8 +43,8 @@ const TechStack = () => {
                 tabIndex={0}
             >
                 {!collapse
-                    ? (<MdIndeterminateCheckBox style={styles.buttonIcon} />)
-                    : (<MdAddBox style={styles.buttonIcon} />)}
+                    ? (<MdIndeterminateCheckBox style={styles.buttonIconBlack} />)
+                    : (<MdAddBox style={styles.buttonIconBlack} />)}
                 My Tech Stack
             </div>
             <animated.div
@@ -62,7 +62,7 @@ const TechStack = () => {
                                 <FaReact style={styles.icon} />
                                 <DiSwift style={styles.icon} />
                             </div>
-                            <h3 align="center">Tools I am familiar with:</h3>
+                            <h3 align="center" style={styles.text}>Tools I am familiar with:</h3>
                             <div>
                                 <FaGithub style={styles.icon} />
                                 <FiGitlab style={styles.icon} />
@@ -71,8 +71,8 @@ const TechStack = () => {
                                 <DiVisualstudio style={styles.icon} />
                                 <DiAtom style={styles.icon} />
                             </div>
-                            <h3 align="center">Also worked with:</h3>
-                            <ul>
+                            <h3 align="center" style={styles.text}>Also worked with:</h3>
+                            <ul style={styles.text}>
                                 <li>Postman</li>
                                 <li>Realm Databases</li>
                                 <li>Proto.io</li>

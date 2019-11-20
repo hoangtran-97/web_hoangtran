@@ -92,16 +92,17 @@ const styles = {
     banner: {
         display: "flex",
         flexDirection: "row",
-        backgroundColor: colors.sonicSilver,
+        backgroundColor: colors.pullmanGreen,
         justifyContent: "flex-start",
         alignItems: "center",
         height: "95vh",
         paddingLeft: "15%"
     },
     text: {
-        color: colors.gunMetal
+        color: colors.silverSand
     },
     dogeComment: {
+        color: colors.gunMetal,
         backgroundColor: colors.silverSand,
         width: 300,
         height: 40,

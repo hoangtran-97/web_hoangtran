@@ -34,23 +34,26 @@ Header.defaultProps = {
     siteTitle: "",
 };
 const styles = {
-    active: {backgroundColor: colors.sonicSilver, borderRadius: 50},
+    active: {
+        backgroundColor: colors.pullmanGreen, borderRadius: 50, padding: 10
+    },
     h4: {
         color: "white",
         textDecoration: "none",
         padding: 5
     },
     container: {
-        margin: "0 auto",
+        margin: "auto",
         maxWidth: 1080,
-        padding: "1.45rem 1.0875rem",
+        padding: 20,
         display: "flex",
         flexDirection: "row",
         justifyContent: "space-between",
         alignItems: "center"
     },
     header: {
-        background: colors.gunMetal,
+        background: colors.turtleGreen,
+        marginBottom: 50
     }
 };
 

@@ -8,7 +8,7 @@ export default {
         width: 50,
         height: 50,
         margin: 20,
-        color: colors.silverSand
+        color: colors.turtleGreen
     },
     buttonSection: {
         display: "flex",
@@ -17,6 +17,7 @@ export default {
         fontSize: 25,
         width: "100vw",
         fontWeight: "600",
+        color: colors.silverSand
     },
     buttonIcon: {
         width: 30,
@@ -26,17 +27,21 @@ export default {
     },
     button: {
         display: "flex",
-        justifyContent: "flex-start",
+        justifyContent: "center",
         alignItems: "center",
         fontSize: 35,
         fontWeight: "600",
-        width: "100vw"
+        backgroundColor: colors.turtleGreen,
+        borderRadius: 50,
+        textAlign: "center",
+        margin: "auto",
+        padding: 20
     },
     indexContainer: {
 
     },
     subContainer: {
-        backgroundColor: colors.silverSand,
+        backgroundColor: colors.turtleGreen,
         borderRadius: 20,
         padding: 10,
     },
@@ -92,5 +97,14 @@ export default {
         marginRight: "auto",
         marginLeft: "auto",
         display: "block"
-    }
+    },
+    text: {
+        color: colors.silverSand
+    },
+    buttonIconBlack: {
+        width: 30,
+        height: 30,
+        color: colors.black,
+        margin: 20
+    },
 };

@@ -33,13 +33,13 @@ const Layout = ({ children }) => {
             </Row>
             <Row>
                 <main>{children}</main>
-                <footer style={{backgroundColor: colors.gunMetal, color: "white"}}>
-                       ©
+                <footer style={{ backgroundColor: colors.turtleGreen, color: colors.black }}>
+          ©
                     {" "}
                     {new Date().getFullYear()}
-                    , Built with
+          , Built with
                     {" "}
-                    <a style={{color: "white"}} href="https://www.gatsbyjs.org">Gatsby</a>
+                    <a style={{ color: "white" }} href="https://www.gatsbyjs.org">Gatsby</a>
                 </footer>
             </Row>
         </Container>

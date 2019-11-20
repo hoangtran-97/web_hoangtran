@@ -34,8 +34,8 @@ const CV = () => {
                 tabIndex="-1"
             >
                 {!collapse
-                    ? (<MdIndeterminateCheckBox style={styles.buttonIcon} />)
-                    : (<MdAddBox style={styles.buttonIcon} />)}
+                    ? (<MdIndeterminateCheckBox style={styles.buttonIconBlack} />)
+                    : (<MdAddBox style={styles.buttonIconBlack} />)}
                 CV
             </div>
             <animated.div
