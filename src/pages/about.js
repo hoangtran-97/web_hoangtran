@@ -1,5 +1,6 @@
 import React from "react";
 import Row from "react-bootstrap/Row";
+import { Paper, Typography } from "@material-ui/core";
 import colors from "../constants/colors";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -27,56 +28,56 @@ const About = () => (
                 </div>
             </Row>
             <Row>
-                <div style={styles.rowStyle}>
-                    <h1 align="center" >Who am I?</h1>
-                    <h2>React/React Native developer with a lot of curiosity.</h2>
-                    <p>I develop products using React and React Native, I strive to become a Full-Stack/Mobile Developer.</p>
-                    <p>React introduced me to Declarative Programming, I believe it has forever changed programming.</p>
-                    <p>React, React Native, Flutter, SwiftUI, they are all declarative and I would love to create products with them.</p>
-                    <p>I love mobile technology and creating products to make our lives easier.</p>
-                </div>
-                <div style={styles.rowStyle}>
-                    <h1 align="center">More About Me</h1>
-                    <p>I am a student from South-Eastern Finland University of Applied Sciences, XAMK.</p>
-                    <p>My degree program is Bachelor of Engineering, Information Technology.</p>
-                    <p>I majored in Networking, meaning my studies are related to networking devices, routers, switches, servers, virtualization, IoT,...</p>
-                    <p>However, I moved to learn programming to become a Full-Stack developer.</p>
-                    <p>
+                <Paper style={styles.rowStyle} elevation={10}>
+                    <Typography align="center" >Who am I?</Typography>
+                    <Typography>React/React Native developer with a lot of curiosity.</Typography>
+                    <Typography>I develop products using React and React Native, I strive to become a Full-Stack/Mobile Developer.</Typography>
+                    <Typography>React introduced me to Declarative Programming, I believe it has forever changed programming.</Typography>
+                    <Typography>React, React Native, Flutter, SwiftUI, they are all declarative and I would love to create products with them.</Typography>
+                    <Typography>I love mobile technology and creating products to make our lives easier.</Typography>
+                </Paper>
+                <Paper style={styles.rowStyle} elevation={10}>
+                    <Typography align="center">More About Me</Typography>
+                    <Typography>I am a student from South-Eastern Finland University of Applied Sciences, XAMK.</Typography>
+                    <Typography>My degree program is Bachelor of Engineering, Information Technology.</Typography>
+                    <Typography>I majored in Networking, meaning my studies are related to networking devices, routers, switches, servers, virtualization, IoT,...</Typography>
+                    <Typography>However, I moved to learn programming to become a Full-Stack developer.</Typography>
+                    <Typography>
                         For me, it is more engaging, more challenging
                         but more rewarding and it is my dream to build something
                         on my own to improve peoples daily life,
                         especially a mobile product since the smartphone is a part of our lives nowadays.
-                    </p>
-                </div>
-                <div style={styles.rowStyle}>
-                    <h1 align="center">My Interests</h1>
-                    <ul>
+                    </Typography>
+                </Paper>
+                <Paper style={styles.rowStyle} elevation={10}>
+                    <Typography align="center">My Interests</Typography>
+                    <Typography>
                         <li>Two cups of coffee a day.</li>
                         <li>Mobile and Web programming.</li>
                         <li>Technology, watching them on YouTube or reading about them on Reddit.</li>
                         <li>Video Games(Strategy, Puzzle game or anything with a good story)</li>
                         <li>These mobile OSes</li>
-                    </ul>
-                    <div style={styles.osBackgroundContainer}>
+                    </Typography>
+                    <Typography style={styles.osBackgroundContainer}>
                         <Image alt="OS" filename="meego.jpeg" style={styles.osBackground} />
-                    </div>
-                    <p>Meego, the first OS with no button for navigation(that I know of).</p>
-                    <div style={styles.osBackgroundContainer}>
+                    </Typography>
+                    <Typography>Meego, the first OS with no button for navigation(that I know of).</Typography>
+                    <Typography style={styles.osBackgroundContainer}>
                         <Image alt="OS" filename="symbian.png" style={styles.osBackground} />
-                    </div>
-                    <p>My first mobile OS.</p>
-                    <div style={styles.osBackgroundContainer}>
+                    </Typography>
+                    <Typography>My first mobile OS.</Typography>
+                    <Typography style={styles.osBackgroundContainer}>
                         <Image alt="OS" filename="sailfishos.jpeg" style={styles.osBackground} />
-                    </div>
-                    <p>Sailfish OS, the successor of Meego.</p>
-                    <div style={styles.osBackgroundContainer}>
+                    </Typography>
+                    <Typography>Sailfish OS, the successor of Meego.</Typography>
+                    <Typography style={styles.osBackgroundContainer}>
                         <Image alt="OS" filename="iOS.png" style={styles.osBackground} />
-                    </div>
-                    <p>Everyone knows this one.</p>
-                </div>
+                    </Typography>
+                    <Typography>Everyone knows this one.</Typography>
+                </Paper>
             </Row>
         </Row>
-    </Layout>
+    </Layout >
 );
 const styles = {
     backGround: {

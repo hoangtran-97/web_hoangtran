@@ -1,60 +1,93 @@
 import { Link } from "gatsby";
-import PropTypes from "prop-types";
-import React from "react";
+import React, { useState } from "react";
+import {
+    Drawer, Button, List, ListItem, Divider, Typography, ListItemIcon, AppBar
+} from "@material-ui/core";
+import {
+    Menu as MenuIcon, InfoRounded, AccountCircleRounded, TonalityRounded, CancelRounded, ExploreRounded
+} from "@material-ui/icons/";
 import colors from "../constants/colors";
 
-const Header = ({ siteTitle }) => (
-    <header style={styles.header}>
-        <div style={styles.container}>
-            <h4>
-                <Link to="/" style={styles.h4} activeStyle={styles.active} >
-                    {" "}
-                    {siteTitle}
-                    {" "}
-                </Link>
-            </h4>
-            <p>
-                <Link to="/about" style={styles.h4} activeStyle={styles.active}> About Me </Link>
-            </p>
+const Header = ({ siteTitle }) => {
+    const [drawerState, setDrawerState] = useState(false);
+    const toggleDrawer = (newState) => (event) => {
+        if (event.type === "keydown" && (event.key === "Tab" || event.key === "Shift")) {
+            return;
+        }
 
-            <p>
-                <Link to="/resume" style={styles.h4} activeStyle={styles.active}> Resume </Link>
-            </p>
-            <p>
-                <Link to="/contacts" style={styles.h4} activeStyle={styles.active}> Contact </Link>
-            </p>
-        </div>
-    </header>
-);
-Header.propTypes = {
-    siteTitle: PropTypes.string,
+        setDrawerState(newState);
+    };
+    return (
+        <AppBar style={styles.container}>
+            <Button onClick={toggleDrawer(!drawerState)}>
+                <MenuIcon fontSize="large" style={{ color: colors.plainWhite }} />
+            </Button>
+            <Drawer anchor="top" open={drawerState} onClose={toggleDrawer()}>
+                <div style={styles.listContainer}>
+                    <List>
+                        <ListItem >
+                            <ListItemIcon><ExploreRounded /></ListItemIcon>
+                            <Link to="/" style={styles.inActive} activeStyle={styles.active} >
+                                <Typography variant="h6" style={styles.listButton}>Home</Typography>
+                            </Link>
+                        </ListItem>
+                        <ListItem >
+                            <ListItemIcon><InfoRounded /></ListItemIcon>
+                            <Link to="/about" style={styles.inActive} activeStyle={styles.active}>
+                                <Typography variant="h6" style={styles.listButton}>About Me</Typography>
+                            </Link>
+                        </ListItem>
+                        <ListItem >
+                            <ListItemIcon><AccountCircleRounded /></ListItemIcon>
+                            <Link to="/resume" style={styles.inActive} activeStyle={styles.active}>
+                                <Typography variant="h6" style={styles.listButton}>Resume</Typography>
+                            </Link>
+                        </ListItem>
+                        <ListItem >
+                            <ListItemIcon><TonalityRounded /></ListItemIcon>
+                            <Link to="/contacts" style={styles.inActive} activeStyle={styles.active}>
+                                <Typography variant="h6" style={styles.listButton}>Contact</Typography>
+                            </Link>
+                        </ListItem>
+                        <Divider />
+                        <ListItem>
+                            <Button onClick={toggleDrawer(!drawerState)}>
+                                <ListItemIcon><CancelRounded /></ListItemIcon>
+                                <Typography variant="h7" style={styles.listButton}>Close</Typography>
+                            </Button>
+                        </ListItem>
+                    </List>
+                </div>
+            </Drawer>
+            <Link to="/" style={styles.inActive} >
+                <Typography variant="h5" style={styles.listButton}>{siteTitle}</Typography>
+            </Link>
+        </AppBar>
+    );
 };
 
-Header.defaultProps = {
-    siteTitle: "",
-};
 const styles = {
     active: {
-        backgroundColor: colors.pullmanGreen, borderRadius: 50, padding: 10
+        backgroundColor: colors.pullmanGreen, borderRadius: 50, textDecoration: "none"
     },
-    h4: {
-        color: "white",
-        textDecoration: "none",
-        padding: 5
+    inActive: {
+        backgroundColor: colors.turtleGreen, borderRadius: 50, textDecoration: "none"
     },
     container: {
-        margin: "auto",
-        maxWidth: 1080,
-        padding: 20,
+        padding: 10,
+        backgroundColor: colors.turtleGreen,
         display: "flex",
         flexDirection: "row",
         justifyContent: "space-between",
-        alignItems: "center"
+        alginItems: "center"
     },
-    header: {
-        background: colors.turtleGreen,
-        marginBottom: 50
-    }
+    listContainer: {
+        backgroundColor: colors.turtleGreen
+    },
+    listButton: {
+        color: "white",
+        padding: 10
+    },
 };
 
 export default Header;

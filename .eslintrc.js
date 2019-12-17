@@ -1,5 +1,5 @@
 module.exports = {
-  root: true,
+    root: true,
     "extends": "airbnb",
     "parser": "babel-eslint",
     "env": {
@@ -11,9 +11,9 @@ module.exports = {
         "react/prop-types": "off",
         "comma-dangle": "off",
         "indent": ["error", 4],
-        "react/jsx-indent" : ["error", 4],
-        "react/jsx-indent-props" : ["error", 4],
-        "import/prefer-default-export" : "off",
+        "react/jsx-indent": ["error", 4],
+        "react/jsx-indent-props": ["error", 4],
+        "import/prefer-default-export": "off",
         "react/prefer-stateless-function": "off",
         "react/jsx-no-bind": "off",
         "react/jsx-tag-spacing": "off",
@@ -21,14 +21,14 @@ module.exports = {
         "require-yield": "off",
         "no-underscore-dangle": "off",
         "react/no-string-refs": "off",
-        "max-len": ["error", { "code": 165 }],
+        "max-len": ["error", { "code": 185 }],
         "react/destructuring-assignment": [1, "always", { "ignoreClassFields": true }],
-        "react/no-multi-comp":  [1, { "ignoreStateless": true }],
+        "react/no-multi-comp": [1, { "ignoreStateless": true }],
         "no-shadow": "off",
         "global-require": "off",
         "no-unused-vars": "off",
         "no-alert": 1,
-        "linebreak-style": 0 ,  // <----------
+        "linebreak-style": 0,  // <----------
         "eslint guard-for-in": "off",
         "react/jsx-uses-react": "error",
         "react/jsx-uses-vars": "error",
@@ -40,10 +40,11 @@ module.exports = {
         "react/no-array-index-key": "off",
         "react/sort-comp": "off",
         "no-undef": "off",
-        "no-nested-ternary":"off",
-        "no-unused-expressions":"off",
-		"quotes": [2, "double", { "avoidEscape": true }],
+        "no-nested-ternary": "off",
+        "no-unused-expressions": "off",
+        "quotes": [2, "double", { "avoidEscape": true }],
         "no-unused-vars": [1, { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }],
+        "react/jsx-one-expression-per-line": "off"
     },
     "globals": {
         "fetch": false
