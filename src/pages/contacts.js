@@ -6,7 +6,7 @@ import {
     FiLinkedin,
     FiPhoneCall
 } from "react-icons/fi";
-import { Paper, Typography, Grid } from "@material-ui/core";
+import { Paper } from "@material-ui/core";
 import colors from "../constants/colors";
 import Layout from "../components/layout";
 import SEO from "../components/seo";

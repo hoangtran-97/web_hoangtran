@@ -8,7 +8,12 @@ export default {
         width: 50,
         height: 50,
         margin: 20,
-        color: colors.turtleGreen
+        color: colors.sub
+    },
+    iconContainer: {
+        backgroundColor: colors.main,
+        display: "inline-block",
+        padding: 10
     },
     buttonSection: {
         display: "flex",

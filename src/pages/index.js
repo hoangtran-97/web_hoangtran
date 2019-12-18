@@ -22,6 +22,8 @@ import SEO from "../components/seo";
 import colors from "../constants/colors";
 
 // TODO: Add button for MYCV, MY Resume, more tech, more tools, more experience, more side project.
+// TODO: new Font
+// TODO: global style
 
 const IndexPage = () => (
     <>
@@ -94,7 +96,9 @@ const IndexPage = () => (
                                     <ListItemIcon>
                                         <ChevronRight />
                                     </ListItemIcon>
-                                    <ListItemText primary="Comprehend the business model, develop ideas into prototype and finally build a React Native Application for Android and iOS." />
+                                    <ListItemText
+                                        primary="Comprehend the business model, develop ideas into prototype and finally build a React Native Application for Android and iOS."
+                                    />
                                 </ListItem>
                                 <ListItem>
                                     <ListItemIcon>
