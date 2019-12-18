@@ -6,6 +6,7 @@ import {
     FiLinkedin,
     FiPhoneCall
 } from "react-icons/fi";
+import { Paper, Typography, Grid } from "@material-ui/core";
 import colors from "../constants/colors";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -14,7 +15,7 @@ const Projects = () => (
     <Layout>
         <SEO title="Contacts" />
         <div style={styles.container}>
-            <div style={styles.textSection}>
+            <Paper style={styles.textSection} elevation={5}>
                 <h1 align="center" style={styles.text}>Let&apos;s Connect</h1>
                 <div>
                     <a
@@ -61,7 +62,7 @@ const Projects = () => (
                         +358 46 845 2553
                     </a>
                 </div>
-            </div>
+            </Paper>
         </div>
     </Layout>
 );
@@ -74,24 +75,21 @@ const styles = {
         backgroundColor: colors.pullmanGreen
     },
     textSection: {
-        width: "60%",
-        minWidth: 300,
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        margin: 10
+        display: "inline-block",
+        backgroundColor: colors.turtleGreen,
+        padding: 50
     },
     icon: {
         width: 50,
         height: 50,
         margin: 20,
-        color: colors.silverSand
+        color: colors.black
     },
     anchor: {
-        display: "flex", alignItems: "center", color: colors.silverSand
+        display: "flex", alignItems: "center", color: colors.black
     },
     text: {
-        color: colors.silverSand
+        color: colors.black
     }
 };
 export default Projects;

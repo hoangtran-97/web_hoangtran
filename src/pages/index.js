@@ -34,7 +34,7 @@ const IndexPage = () => (
             </Box>
             <Grid container spacing={2}>
                 <Grid item xs={12} >
-                    <Paper elevation={5} style={styles.paperContent} >
+                    <Paper elevation={5} style={styles.paperContent} className="card" >
                         <Typography variant="h5" >My name is Hoang and I am a Software Developer.</Typography>
                         <Typography variant="h6">It is my goal to become a Full-Stack Developer.</Typography>
                         <Button size="large" variant="outlined">
@@ -45,13 +45,13 @@ const IndexPage = () => (
                     </Paper>
                 </Grid>
                 <Grid item xs={12} >
-                    <Paper elevation={5} style={styles.paperContent}>
+                    <Paper elevation={5} style={styles.paperContent} className="card">
                         <Button size="large" variant="outlined">My CV</Button>
                         <Button size="large" variant="outlined">My Full Resume</Button>
                     </Paper>
                 </Grid>
                 <Grid item xs={12} sm={6}>
-                    <Card elevation={5} style={styles.cardContent}>
+                    <Card elevation={5} style={styles.cardContent} className="card">
                         <CardContent>
                             <Typography variant="h5">Some technologies that I am familiar with</Typography>
                             <IoLogoJavascript style={styles.icon} />
@@ -65,7 +65,7 @@ const IndexPage = () => (
                     </Card>
                 </Grid>
                 <Grid item xs={12} sm={6}>
-                    <Card elevation={5} style={styles.cardContent}>
+                    <Card elevation={5} style={styles.cardContent} className="card">
                         <CardContent>
                             <Typography variant="h5">Tools that I love to use</Typography>
                             <DiVisualstudio style={styles.icon} />
@@ -79,7 +79,7 @@ const IndexPage = () => (
                     </Card>
                 </Grid>
                 <Grid item xs={12} sm={6}>
-                    <Card elevation={5} style={styles.cardContent}>
+                    <Card elevation={5} style={styles.cardContent} className="card">
                         <CardContent>
                             <Typography variant="h5">As a Software Developer - Kangaroo DMS</Typography>
                             <Typography >A solution of Digital Management System for enterprise.</Typography>
@@ -116,7 +116,7 @@ const IndexPage = () => (
                     </Card>
                 </Grid>
                 <Grid item xs={12} sm={6}>
-                    <Card elevation={5} style={styles.cardContent}>
+                    <Card elevation={5} style={styles.cardContent} className="card">
                         <CardContent>
                             <Typography variant="h5">Side Project - YouTubeMobile</Typography>
                             <Typography >A simple YouTube viewing app.</Typography>
@@ -163,7 +163,7 @@ const styles = {
     paperContent: {
         backgroundColor: colors.turtleGreen,
         display: "inline-block",
-        padding: 10,
+        padding: 10
     },
     icon: {
         width: 50,
