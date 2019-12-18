@@ -14,11 +14,10 @@ const Header = ({ siteTitle }) => {
         if (event.type === "keydown" && (event.key === "Tab" || event.key === "Shift")) {
             return;
         }
-
         setDrawerState(newState);
     };
     return (
-        <AppBar style={styles.container}>
+        <AppBar style={styles.container} elevation="5">
             <Button onClick={toggleDrawer(!drawerState)}>
                 <MenuIcon fontSize="large" style={{ color: colors.plainWhite }} />
             </Button>
@@ -60,7 +59,7 @@ const Header = ({ siteTitle }) => {
                 </div>
             </Drawer>
             <Link to="/" style={styles.inActive} >
-                <Typography variant="h5" style={styles.listButton}>{siteTitle}</Typography>
+                <Typography variant="h6" style={styles.listButton}>{siteTitle}</Typography>
             </Link>
         </AppBar>
     );
@@ -68,10 +67,20 @@ const Header = ({ siteTitle }) => {
 
 const styles = {
     active: {
-        backgroundColor: colors.pullmanGreen, borderRadius: 50, textDecoration: "none"
+        backgroundColor: colors.pullmanGreen,
+        borderRadius: 50,
+        textDecoration: "none",
+        width: 150,
+        display: "flex",
+        justifyContent: "center"
     },
     inActive: {
-        backgroundColor: colors.turtleGreen, borderRadius: 50, textDecoration: "none"
+        backgroundColor: colors.turtleGreen,
+        borderRadius: 50,
+        textDecoration: "none",
+        width: 150,
+        display: "flex",
+        justifyContent: "center"
     },
     container: {
         padding: 10,
@@ -79,14 +88,14 @@ const styles = {
         display: "flex",
         flexDirection: "row",
         justifyContent: "space-between",
-        alginItems: "center"
+        alginItems: "center",
     },
     listContainer: {
         backgroundColor: colors.turtleGreen
     },
     listButton: {
         color: "white",
-        padding: 10
+        padding: 10,
     },
 };
 

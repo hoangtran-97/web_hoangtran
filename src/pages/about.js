@@ -28,7 +28,7 @@ const About = () => (
                 </div>
             </Row>
             <Row>
-                <Paper style={styles.rowStyle} elevation={10}>
+                <Paper style={styles.rowStyle} elevation={5}>
                     <Typography align="center" >Who am I?</Typography>
                     <Typography>React/React Native developer with a lot of curiosity.</Typography>
                     <Typography>I develop products using React and React Native, I strive to become a Full-Stack/Mobile Developer.</Typography>
@@ -36,7 +36,7 @@ const About = () => (
                     <Typography>React, React Native, Flutter, SwiftUI, they are all declarative and I would love to create products with them.</Typography>
                     <Typography>I love mobile technology and creating products to make our lives easier.</Typography>
                 </Paper>
-                <Paper style={styles.rowStyle} elevation={10}>
+                <Paper style={styles.rowStyle} elevation={5}>
                     <Typography align="center">More About Me</Typography>
                     <Typography>I am a student from South-Eastern Finland University of Applied Sciences, XAMK.</Typography>
                     <Typography>My degree program is Bachelor of Engineering, Information Technology.</Typography>
@@ -49,7 +49,7 @@ const About = () => (
                         especially a mobile product since the smartphone is a part of our lives nowadays.
                     </Typography>
                 </Paper>
-                <Paper style={styles.rowStyle} elevation={10}>
+                <Paper style={styles.rowStyle} elevation={5}>
                     <Typography align="center">My Interests</Typography>
                     <Typography>
                         <li>Two cups of coffee a day.</li>
