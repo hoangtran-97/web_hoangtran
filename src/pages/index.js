@@ -153,7 +153,7 @@ const IndexPage = () => (
 
 const styles = {
     paperIntro: {
-        backgroundColor: colors.turtleGreen,
+        backgroundColor: colors.main,
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
@@ -161,7 +161,7 @@ const styles = {
         padding: 10
     },
     paperContent: {
-        backgroundColor: colors.turtleGreen,
+        backgroundColor: colors.main,
         display: "inline-block",
         padding: 10
     },
@@ -169,15 +169,15 @@ const styles = {
         width: 50,
         height: 50,
         margin: 20,
-        color: colors.pullmanGreen
+        color: colors.sub
     },
     cardContent: {
-        backgroundColor: colors.turtleGreen,
+        backgroundColor: colors.main,
         padding: 10,
     },
     buttonLink: {
         textDecoration: "none",
-        color: colors.black
+        color: colors.text
     }
 };
 export default IndexPage;

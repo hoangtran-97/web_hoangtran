@@ -72,24 +72,24 @@ const styles = {
         justifyContent: "center",
         alignItems: "center",
         height: "93vh",
-        backgroundColor: colors.pullmanGreen
+        backgroundColor: colors.sub
     },
     textSection: {
         display: "inline-block",
-        backgroundColor: colors.turtleGreen,
+        backgroundColor: colors.main,
         padding: 50
     },
     icon: {
         width: 50,
         height: 50,
         margin: 20,
-        color: colors.black
+        color: colors.text
     },
     anchor: {
-        display: "flex", alignItems: "center", color: colors.black
+        display: "flex", alignItems: "center", color: colors.text
     },
     text: {
-        color: colors.black
+        color: colors.text
     }
 };
 export default Projects;

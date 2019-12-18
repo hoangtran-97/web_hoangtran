@@ -19,7 +19,7 @@ const Header = ({ siteTitle }) => {
     return (
         <AppBar style={styles.container} elevation="5">
             <Button onClick={toggleDrawer(!drawerState)}>
-                <MenuIcon fontSize="large" style={{ color: colors.plainWhite }} />
+                <MenuIcon fontSize="large" style={styles.drawerButton} />
             </Button>
             <Drawer anchor="top" open={drawerState} onClose={toggleDrawer()}>
                 <div style={styles.listContainer}>
@@ -67,7 +67,7 @@ const Header = ({ siteTitle }) => {
 
 const styles = {
     active: {
-        backgroundColor: colors.pullmanGreen,
+        backgroundColor: colors.sub,
         borderRadius: 50,
         textDecoration: "none",
         width: 150,
@@ -75,7 +75,7 @@ const styles = {
         justifyContent: "center"
     },
     inActive: {
-        backgroundColor: colors.turtleGreen,
+        backgroundColor: colors.main,
         borderRadius: 50,
         textDecoration: "none",
         width: 150,
@@ -84,19 +84,22 @@ const styles = {
     },
     container: {
         padding: 10,
-        backgroundColor: colors.turtleGreen,
+        backgroundColor: colors.main,
         display: "flex",
         flexDirection: "row",
         justifyContent: "space-between",
         alginItems: "center",
     },
     listContainer: {
-        backgroundColor: colors.turtleGreen
+        backgroundColor: colors.main
     },
     listButton: {
-        color: "white",
+        color: colors.highlight,
         padding: 10,
     },
+    drawerButton: {
+        color: colors.highlight
+    }
 };
 
 export default Header;

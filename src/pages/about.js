@@ -1,6 +1,8 @@
 import React from "react";
 
-import { Paper, Typography, Grid } from "@material-ui/core";
+import {
+    Paper, Typography, Grid, Divider
+} from "@material-ui/core";
 import colors from "../constants/colors";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -29,15 +31,17 @@ const About = () => (
         <Grid container spacing={2}>
             <Grid item xs={12} >
                 <Paper style={styles.rowStyle} elevation={5}>
-                    <Typography align="center" variant="h4">Who am I?</Typography>
-                    <Typography variant="h6">Software Developer with a lot of curiosity.</Typography>
+                    <Typography variant="h4">Who am I?</Typography>
+                    <Divider />
+                    <Typography variant="h6">A Software Developer with a lot of curiosity.</Typography>
                     <Typography variant="h6">I develop products using React and React Native, I strive to become a Full-Stack/Mobile Developer.</Typography>
                     <Typography variant="h6">I love mobile technology and creating products to make our lives easier.</Typography>
                 </Paper>
             </Grid>
             <Grid item xs={12}>
                 <Paper style={styles.rowStyle} elevation={5}>
-                    <Typography align="center" variant="h4">More About Me</Typography>
+                    <Typography variant="h4">More About Me</Typography>
+                    <Divider />
                     <Typography variant="h6">I am a student from South-Eastern Finland University of Applied Sciences, XAMK.</Typography>
                     <Typography variant="h6">My degree program is Bachelor of Engineering, Information Technology.</Typography>
                     <Typography variant="h6">I majored in Networking, meaning my studies are related to networking devices, routers, switches, servers, virtualization, IoT,...</Typography>
@@ -51,11 +55,12 @@ const About = () => (
             </Grid>
             <Grid item xs={12}>
                 <Paper style={styles.rowStyle} elevation={5}>
-                    <Typography align="center" variant="h4">My Interests</Typography>
+                    <Typography variant="h4">My Interests</Typography>
+                    <Divider />
                     <Typography variant="h6">
                         <li>Two cups of coffee a day.</li>
                         <li>Mobile and Web programming.</li>
-                        <li>Technology, watching them on YouTube or reading about them on Reddit.</li>
+                        <li>Technology, watching them on YouTube or reading about them on Reddit then tinkering around with them.</li>
                         <li>Video Games(Strategy, Puzzle game or anything with a good story)</li>
                         <li>These mobile OSes</li>
                     </Typography>
@@ -87,7 +92,7 @@ const styles = {
         borderRadius: 20,
     },
     container: {
-        backgroundColor: colors.pullmanGreen,
+        backgroundColor: colors.sub,
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-around",
@@ -108,7 +113,7 @@ const styles = {
         width: 200,
         height: 200,
         borderRadius: 100,
-        borderColor: colors.pullmanGreen,
+        borderColor: colors.sub,
         borderStyle: "solid",
         borderWidth: 10,
     },
@@ -136,7 +141,7 @@ const styles = {
         margin: 10,
     },
     rowStyle: {
-        backgroundColor: colors.turtleGreen,
+        backgroundColor: colors.main,
         display: "flex",
         padding: 10,
         flexDirection: "column",
