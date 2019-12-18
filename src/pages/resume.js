@@ -51,7 +51,7 @@ const Resume = () => {
                     <Skills />
                 </TabPanel>
                 <TabPanel value={activeTab} index={1}>
-                    Item Two
+                    <CV />
                 </TabPanel>
                 <TabPanel value={activeTab} index={2}>
                     Item Three

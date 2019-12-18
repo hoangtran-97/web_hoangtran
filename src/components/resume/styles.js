@@ -56,13 +56,13 @@ export default {
         flexDirection: "column"
     },
     buttonDownload: {
-        backgroundColor: colors.silverSand,
+        backgroundColor: colors.main,
         width: 150,
         height: 50,
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        borderRadius: 50,
+        borderRadius: 10,
         margin: 10
     },
     pdf: {
@@ -70,7 +70,7 @@ export default {
     },
     buttonDownloadText: {
         textDecoration: "none",
-        color: colors.gunMetal,
+        color: colors.text,
         fontWeight: "700"
     },
     imageMomentsSplash: {
