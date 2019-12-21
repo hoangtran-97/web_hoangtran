@@ -23,7 +23,7 @@ const Skills = () => (
         <Grid container spacing={2}>
             <Grid item xs={12} sm={6}>
                 <Paper style={styles.iconContainer}>
-                    <Typography variant="h4">Technical skill</Typography>
+                    <Typography variant="h5" color="primary">Technical skill</Typography>
                     <IoLogoJavascript style={styles.icon} className="card" />
                     <FaNode style={styles.icon} className="card" />
                     <FaReact style={styles.icon} className="card" />
@@ -84,7 +84,7 @@ const Skills = () => (
             </Grid>
             <Grid item xs={12} sm={6}>
                 <Paper style={styles.iconContainer}>
-                    <Typography variant="h4">Tools</Typography>
+                    <Typography variant="h5" color="primary">Tools</Typography>
                     <FaGithub style={styles.icon} className="card" />
                     <FiGitlab style={styles.icon} className="card" />
                     <FaDocker style={styles.icon} className="card" />

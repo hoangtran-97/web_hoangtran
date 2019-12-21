@@ -1,13 +1,14 @@
 import React from "react";
 
 import {
-    Paper, Typography, Grid, Divider
+    Paper, Typography, Grid
 } from "@material-ui/core";
 import colors from "../constants/colors";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import Image from "../components/image";
 
+const elevation = 10;
 const About = () => (
     <Layout>
         <SEO title="About Me" />
@@ -28,20 +29,18 @@ const About = () => (
                 </div>
             </div>
         </div>
-        <Grid container spacing={2}>
+        <Grid container spacing={4}>
             <Grid item xs={12} >
-                <Paper style={styles.rowStyle} elevation={5}>
-                    <Typography variant="h4">Who am I?</Typography>
-                    <Divider />
+                <Paper style={styles.rowStyle} elevation={elevation}>
+                    <Typography variant="h5" color="primary" gutterBottom>Who am I?</Typography>
                     <Typography variant="h6">A Software Developer with a lot of curiosity.</Typography>
                     <Typography variant="h6">I develop products using React and React Native, I strive to become a Full-Stack/Mobile Developer.</Typography>
                     <Typography variant="h6">I love mobile technology and creating products to make our lives easier.</Typography>
                 </Paper>
             </Grid>
             <Grid item xs={12}>
-                <Paper style={styles.rowStyle} elevation={5}>
-                    <Typography variant="h4">More About Me</Typography>
-                    <Divider />
+                <Paper style={styles.rowStyle} elevation={elevation}>
+                    <Typography variant="h5" color="primary" gutterBottom>More About Me</Typography>
                     <Typography variant="h6">I am a student from South-Eastern Finland University of Applied Sciences, XAMK.</Typography>
                     <Typography variant="h6">My degree program is Bachelor of Engineering, Information Technology.</Typography>
                     <Typography variant="h6">I majored in Networking, meaning my studies are related to networking devices, routers, switches, servers, virtualization, IoT,...</Typography>
@@ -54,9 +53,8 @@ const About = () => (
                 </Paper>
             </Grid>
             <Grid item xs={12}>
-                <Paper style={styles.rowStyle} elevation={5}>
-                    <Typography variant="h4">My Interests</Typography>
-                    <Divider />
+                <Paper style={styles.rowStyle} elevation={elevation}>
+                    <Typography variant="h5" color="primary" gutterBottom>My Interests</Typography>
                     <Typography variant="h6">
                         <li>Two cups of coffee a day.</li>
                         <li>Mobile and Web programming.</li>
@@ -92,7 +90,7 @@ const styles = {
         borderRadius: 20,
     },
     container: {
-        backgroundColor: colors.sub,
+        backgroundColor: colors.background,
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-around",
@@ -113,7 +111,7 @@ const styles = {
         width: 200,
         height: 200,
         borderRadius: 100,
-        borderColor: colors.sub,
+        borderColor: colors.background,
         borderStyle: "solid",
         borderWidth: 10,
     },
@@ -141,7 +139,7 @@ const styles = {
         margin: 10,
     },
     rowStyle: {
-        backgroundColor: colors.main,
+        backgroundColor: colors.highlight,
         display: "flex",
         padding: 10,
         flexDirection: "column",

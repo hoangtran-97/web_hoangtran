@@ -11,7 +11,7 @@ export default {
         color: colors.sub
     },
     iconContainer: {
-        backgroundColor: colors.main,
+        backgroundColor: colors.highlight,
         display: "inline-block",
         padding: 10
     },

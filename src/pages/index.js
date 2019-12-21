@@ -25,21 +25,22 @@ import colors from "../constants/colors";
 // TODO: new Font
 // TODO: global style
 
+const elevation = 10;
 const IndexPage = () => (
     <>
         <Layout class="container">
             <SEO title="Welcome" />
             <Box mb={2}>
-                <Paper elevation={5} style={styles.paperIntro}>
-                    <Typography variant="h3" >Hello, welcome to my personal site.</Typography>
+                <Paper elevation={elevation} style={styles.paperContent}>
+                    <Typography variant="h3" color="primary">Hello!</Typography>
                 </Paper>
             </Box>
             <Grid container spacing={2}>
                 <Grid item xs={12} >
-                    <Paper elevation={5} style={styles.paperContent} className="card" >
-                        <Typography variant="h5" >My name is Hoang and I am a Software Developer.</Typography>
-                        <Typography variant="h6">It is my goal to become a Full-Stack Developer.</Typography>
-                        <Button size="large" variant="outlined">
+                    <Paper elevation={elevation} style={styles.paperContent} className="card" >
+                        <Typography variant="h5" color="primary" gutterBottom>My name is Hoang and I am a Software Developer.</Typography>
+                        <Typography variant="h6" gutterBottom>It is my goal to become a Full-Stack Developer.</Typography>
+                        <Button color="primary" variant="contained">
                             <Link to="/about" style={styles.buttonLink}>
                                 <Typography >More About Me</Typography>
                             </Link>
@@ -47,43 +48,47 @@ const IndexPage = () => (
                     </Paper>
                 </Grid>
                 <Grid item xs={12} >
-                    <Paper elevation={5} style={styles.paperContent} className="card">
-                        <Button size="large" variant="outlined">My CV</Button>
-                        <Button size="large" variant="outlined">My Full Resume</Button>
+                    <Paper elevation={elevation} style={styles.paperContent} className="card">
+                        <Typography gutterBottom>View</Typography>
+                        <Box mb={1}>
+                            <Button variant="contained" color="primary">My CV</Button>
+                        </Box>
+                        <Typography gutterBottom>Or</Typography>
+                        <Button variant="contained" color="primary">My Full Resume</Button>
                     </Paper>
                 </Grid>
                 <Grid item xs={12} sm={6}>
-                    <Card elevation={5} style={styles.cardContent} className="card">
+                    <Card elevation={elevation} style={styles.cardContent} className="card">
                         <CardContent>
-                            <Typography variant="h5">Some technologies that I am familiar with</Typography>
+                            <Typography variant="h5" color="primary">Some technologies that I am familiar with</Typography>
                             <IoLogoJavascript style={styles.icon} />
                             <FaNode style={styles.icon} />
                             <FaReact style={styles.icon} />
                             <DiSwift style={styles.icon} />
                         </CardContent>
                         <CardActions>
-                            <Button size="large" variant="outlined">More technologies</Button>
+                            <Button variant="contained" color="primary">More technologies</Button>
                         </CardActions>
                     </Card>
                 </Grid>
                 <Grid item xs={12} sm={6}>
-                    <Card elevation={5} style={styles.cardContent} className="card">
+                    <Card elevation={elevation} style={styles.cardContent} className="card">
                         <CardContent>
-                            <Typography variant="h5">Tools that I love to use</Typography>
+                            <Typography variant="h5" color="primary">Tools that I love to use</Typography>
                             <DiVisualstudio style={styles.icon} />
                             <DiAtom style={styles.icon} />
                             <FiGitlab style={styles.icon} />
                             <FaGithub style={styles.icon} />
                         </CardContent>
                         <CardActions>
-                            <Button size="large" variant="outlined">More tools</Button>
+                            <Button variant="contained" color="primary">More tools</Button>
                         </CardActions>
                     </Card>
                 </Grid>
                 <Grid item xs={12} sm={6}>
-                    <Card elevation={5} style={styles.cardContent} className="card">
+                    <Card elevation={elevation} style={styles.cardContent} className="card">
                         <CardContent>
-                            <Typography variant="h5">As a Software Developer - Kangaroo DMS</Typography>
+                            <Typography variant="h5" color="primary">As a Software Developer - Kangaroo DMS</Typography>
                             <Typography >A solution of Digital Management System for enterprise.</Typography>
                             <List>
                                 <ListItem>
@@ -115,14 +120,14 @@ const IndexPage = () => (
                             </List>
                         </CardContent>
                         <CardActions>
-                            <Button size="large" variant="outlined">More Work Experience</Button>
+                            <Button variant="contained" color="primary">More Work Experience</Button>
                         </CardActions>
                     </Card>
                 </Grid>
                 <Grid item xs={12} sm={6}>
-                    <Card elevation={5} style={styles.cardContent} className="card">
+                    <Card elevation={elevation} style={styles.cardContent} className="card">
                         <CardContent>
-                            <Typography variant="h5">Side Project - YouTubeMobile</Typography>
+                            <Typography variant="h5" color="primary">Side Project - YouTubeMobile</Typography>
                             <Typography >A simple YouTube viewing app.</Typography>
                             <List>
                                 <ListItem>
@@ -146,7 +151,7 @@ const IndexPage = () => (
                             </List>
                         </CardContent>
                         <CardActions>
-                            <Button size="large" variant="outlined">More Side Projects</Button>
+                            <Button variant="contained" color="primary">More Side Projects</Button>
                         </CardActions>
                     </Card>
                 </Grid>
@@ -156,16 +161,8 @@ const IndexPage = () => (
 );
 
 const styles = {
-    paperIntro: {
-        backgroundColor: colors.main,
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        flexDirection: "column",
-        padding: 10
-    },
     paperContent: {
-        backgroundColor: colors.main,
+        backgroundColor: colors.highlight,
         display: "inline-block",
         padding: 10
     },
@@ -176,12 +173,12 @@ const styles = {
         color: colors.sub
     },
     cardContent: {
-        backgroundColor: colors.main,
+        backgroundColor: colors.highlight,
         padding: 10,
     },
     buttonLink: {
         textDecoration: "none",
-        color: colors.text
+        color: colors.highlight
     }
 };
 export default IndexPage;

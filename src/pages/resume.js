@@ -41,11 +41,16 @@ const Resume = () => {
                     value={activeTab}
                     onChange={handleChange}
                     style={styles.tabs}
-                    TabIndicatorProps={{ style: { background: colors.highlight } }}
+                    TabIndicatorProps={{
+                        style: {
+                            background: colors.sub,
+                            height: 4
+                        }
+                    }}
                 >
-                    <Tab label="Skills" />
-                    <Tab label="CV" />
-                    <Tab label="Projects" />
+                    <Tab label="Skills" style={styles.tab} />
+                    <Tab label="CV" style={styles.tab} />
+                    <Tab label="Projects" style={styles.tab} />
                 </Tabs>
                 <TabPanel value={activeTab} index={0}>
                     <Skills />
@@ -68,7 +73,12 @@ const styles = {
         alignItems: "center",
     },
     tabs: {
-        backgroundColor: colors.main
+        backgroundColor: colors.main,
+    },
+    tab: {
+        fontSize: 20,
+        fontWeight: "700",
+        color: colors.sub
     }
 };
 export default Resume;

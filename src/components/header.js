@@ -52,14 +52,14 @@ const Header = ({ siteTitle }) => {
                         <ListItem>
                             <Button onClick={toggleDrawer(!drawerState)}>
                                 <ListItemIcon><CancelRounded /></ListItemIcon>
-                                <Typography variant="h7" style={styles.listButton}>Close</Typography>
+                                <Typography variant="h6" style={styles.listButton}>Close</Typography>
                             </Button>
                         </ListItem>
                     </List>
                 </div>
             </Drawer>
             <Link to="/" style={styles.inActive} >
-                <Typography variant="h6" style={styles.listButton}>{siteTitle}</Typography>
+                <Typography variant="h5" style={styles.listButton}>{siteTitle}</Typography>
             </Link>
         </AppBar>
     );
@@ -70,7 +70,7 @@ const styles = {
         backgroundColor: colors.sub,
         borderRadius: 50,
         textDecoration: "none",
-        width: 150,
+        width: 200,
         display: "flex",
         justifyContent: "center"
     },
@@ -78,7 +78,7 @@ const styles = {
         backgroundColor: colors.main,
         borderRadius: 50,
         textDecoration: "none",
-        width: 150,
+        width: 200,
         display: "flex",
         justifyContent: "center"
     },
